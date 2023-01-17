@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "email": "laskfdjdsaljf@lsadkfja",
+      "password": "$2a$10$hC41a.AnDIKQsIx0xtsLMeiFgw4DZIQCdRoXIa63PqfA9Hmpyq6x.",
+      "login": "sadfsf",
+      "phone": "131213143",
+      "orders": [],
+      "id": 1
+    },
+    {
+      "email": "asdfas@sdf",
+      "password": "$2a$10$eKYGNOsUeJVOMLuv4bYfh.ivbFO8zKl7DUFKjVnjb.SsC3xKpM1iq",
+      "login": "asdf33232",
+      "phone": "23413",
+      "orders": [],
+      "id": 2
+    }
+  ],
+  "closest": [
+    {
+      "id": 1,
+      "title": "Футболка USA",
+      "price": 229,
+      "image": "",
+      "category": "t-short",
+      "size": [
+        "s",
+        "m",
+        "l",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Купальник Glow",
+      "price": 129,
+      "category": "t-short",
+      "size": [
+        "s",
+        "m",
+        "xl"
+      ],
+      "colors": [
+        "green",
+        "black",
+        "white"
+      ]
+    }
+  ]
+}

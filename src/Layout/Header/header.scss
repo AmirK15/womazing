@@ -1,0 +1,47 @@
+.header{
+  padding: 50px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo{
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    color: #000;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  &__list{
+    display: flex;
+    column-gap: 45px;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+  }
+  &__number{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    color: #000;
+  }
+  &__link{
+    color: #000;
+    &.active{
+      font-weight: 700;
+      color: #6E9C9F;
+    }
+  }
+}
