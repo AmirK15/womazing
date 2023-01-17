@@ -6,8 +6,10 @@
     "link4": "Contacts"
   },
   "home": {
-    "firstScreen": {
-      "title": "qwertqwertqwerty"
+    "arrivals": {
+      "title": "New arrivals this <br> season",
+      "desc": "Sophisticated combinations and velvety <br> shades - that's what you were looking for this season. Time to explore.",
+      "button": "Open shop"
     }
   }
 }

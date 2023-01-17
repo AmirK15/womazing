@@ -1,0 +1,40 @@
+.arrivals{
+  .title{
+    line-height: 110%;
+    text-align: left;
+    white-space: nowrap;
+  }
+  &__desc{
+    margin: 45px 0 52px;
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text{
+    max-width: 400px;
+    text-align: right;
+  }
+  &__image{
+    position: relative;
+    width: 434px;
+    height: 652px;
+    &:before{
+      content: url("../../../assets/arrivals/before.png");
+      position: absolute;
+      bottom: -54px;
+      left: -130px;
+    }
+    &:after{
+      content: url("../../../assets/arrivals/after.png");
+      position: absolute;
+      top: 123px;
+      right: -81px;
+    }
+  }
+}

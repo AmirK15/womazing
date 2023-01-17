@@ -71,11 +71,10 @@ const Header = () => {
                                 <path d="M7.55803 15.0354C7.88514 15.0354 8.1503 14.7702 8.1503 14.4431V12.6663C8.1503 12.3392 7.88514 12.074 7.55803 12.074C7.23092 12.074 6.96576 12.3392 6.96576 12.6663V14.4431C6.96576 14.7702 7.23092 15.0354 7.55803 15.0354Z" fill="black"/>
                             </svg>
                         </NavLink>
-                        <div>
-                            <button onClick={() => changesLanguage('ru')}>ru</button>
-                            <button onClick={() => changesLanguage('en')}>en</button>
+                        <div className='header__btns'>
+                            <button className="header__btn" onClick={() => changesLanguage('ru')}>Ru</button>
+                            <button className="header__btn" onClick={() => changesLanguage('en')}>En</button>
                         </div>
-
                         {
                             user.login.length
                                 ? <Link to='/'>Выйти</Link>

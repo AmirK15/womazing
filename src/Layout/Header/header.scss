@@ -44,4 +44,15 @@
       color: #6E9C9F;
     }
   }
+  &__btns{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__btn{
+    border: none;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+  }
 }

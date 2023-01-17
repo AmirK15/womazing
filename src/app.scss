@@ -9,13 +9,37 @@
   list-style: none;
   font-family: 'Raleway', sans-serif;
 }
-
 .container{
   width: 100%;
   max-width: 1110px;
   margin: 0 auto;
 }
+.title{
+  font-weight: 500;
+  font-size: 55px;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.desc{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.btn{
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 138.9%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  padding: 22px 50px;
+  background: #6E9C9F;
+}
+
 
 @import "./Layout/Header/header";
 @import "./pages/Login/login";
 @import "./pages/Register/register";
+@import "pages/Home/Arrivals/arrivals";
