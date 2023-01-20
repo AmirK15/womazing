@@ -4,16 +4,24 @@ import {Link} from "react-router-dom";
 const Login = () => {
     return (
         <section className="login">
-            <form action="">
-                <h2>Вход в аккаунт</h2>
+            <form className="form" action="">
+                <h2 className="form__title">Вход в аккаунт</h2>
 
-                <input type="email" placeholder="Введите email"/>
+                <input
+                    className="form__input"
+                    type="email"
+                    placeholder="Введите email"/>
 
-                <input type="password" placeholder="Введите пароль"/>
+                <input
+                    className="form__input"
+                    type="password"
+                    placeholder="Введите пароль"/>
 
-                <button type="submit">Войти</button>
+                <button className="btn" type="submit">Войти</button>
 
-                <p>Нет аккаунта,<Link to='/register'>Регистрация</Link></p>
+                <p className="desc">Нет аккаунта?
+                    <Link to='/register'> Регистрация</Link>
+                </p>
             </form>
         </section>
     );

@@ -37,9 +37,42 @@
   padding: 22px 50px;
   background: #6E9C9F;
 }
-
+.form{
+  //max-width: 700px;
+  //height: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__title{
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+  &__input{
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid #6E9C9F;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    padding-bottom: 15px;
+    &::placeholder{
+      color: #868686;
+    }
+  }
+  a{
+    font-weight: 600;
+    color: #6E9C9F;
+  }
+}
 
 @import "./Layout/Header/header";
 @import "./pages/Login/login";
 @import "./pages/Register/register";
-@import "pages/Home/Arrivals/arrivals";
+@import "./pages/Home/Arrivals/arrivals";

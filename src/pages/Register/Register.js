@@ -28,23 +28,45 @@ const Register = () => {
     }
 
     return (
-        <section className="register">
-            <form onSubmit={handleSubmit(registerUser)}>
-                <h2>Регистрация </h2>
+        <section>
+            <form className="form" onSubmit={handleSubmit(registerUser)}>
+                <h2 className="form__title">Регистрация </h2>
 
-                <input {...register('email')} type="email" placeholder="Введите email"/>
+                <input
+                    className="form__input"
+                    {...register('email')}
+                    type="email"
+                    placeholder="Введите email"/>
 
-                <input {...register('login')} type="text" placeholder="Введите login"/>
+                <input
+                    className="form__input"
+                    {...register('login')}
+                    type="text"
+                    placeholder="Введите login"/>
 
-                <input {...register('phone')} type="tel" placeholder="Введите номер"/>
+                <input
+                    className="form__input"
+                    {...register('phone')}
+                    type="tel"
+                    placeholder="Введите номер"/>
 
-                <input {...register('password')} type="password" placeholder="Введите password"/>
+                <input
+                    className="form__input"
+                    {...register('password')}
+                    type="password"
+                    placeholder="Введите password"/>
 
-                <input type="password" placeholder="Подтвердить password"/>
+                <input
+                    className="form__input"
+                    type="password"
+                    placeholder="Подтвердить password"/>
 
-                <button type="submit">Регистрация</button>
+                <button className="btn" type="submit">Регистрация</button>
 
-                <p>Уже есть аккаунт,<Link to='/login'>Войти</Link></p>
+                <p className="desc">
+                    Уже есть аккаунт?
+                    <Link to='/login'> Войти</Link>
+                </p>
             </form>
         </section>
     );
