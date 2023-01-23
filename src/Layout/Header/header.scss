@@ -2,7 +2,6 @@
   padding: 50px;
   font-weight: 400;
   font-size: 15px;
-  line-height: 140%;
   letter-spacing: 0.02em;
   &__nav{
     display: flex;
@@ -49,10 +48,18 @@
     align-items: center;
     column-gap: 10px;
   }
+  &__log{
+
+  }
   &__btn{
     border: none;
     width: 40px;
     height: 30px;
     cursor: pointer;
+    font-weight: 600;
+    &-active{
+      background: #6E9C9F;
+      color: #fff;
+    }
   }
 }

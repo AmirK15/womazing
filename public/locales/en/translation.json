@@ -3,7 +3,9 @@
     "link1": "Main",
     "link2": "Shop",
     "link3": "About Brands",
-    "link4": "Contacts"
+    "link4": "Contacts",
+    "login": "Login",
+    "logout": "Sign out"
   },
   "home": {
     "arrivals": {
