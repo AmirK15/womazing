@@ -2,13 +2,10 @@ import React, {useContext} from 'react';
 import {CustomContext} from "../../Context";
 import {Link, useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
-import axios from "axios";
 
 const Register = () => {
 
-    const navigate = useNavigate()
-
-    const {setUser} = useContext(CustomContext)
+    const {registerUser} = useContext(CustomContext)
 
     const {
         register,
@@ -18,14 +15,6 @@ const Register = () => {
         },
         reset
     } = useForm()
-
-    const registerUser = (data) => {
-        axios.post('http://localhost:8080/register', {...data, orders: []})
-            .then((res) => {
-                setUser(res.data.user)
-                navigate('/')
-            })
-    }
 
     return (
         <section>

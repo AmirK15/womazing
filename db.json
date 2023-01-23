@@ -1,20 +1,12 @@
 {
   "users": [
     {
-      "email": "laskfdjdsaljf@lsadkfja",
-      "password": "$2a$10$hC41a.AnDIKQsIx0xtsLMeiFgw4DZIQCdRoXIa63PqfA9Hmpyq6x.",
-      "login": "sadfsf",
-      "phone": "131213143",
+      "email": "aaaa@mail.ru",
+      "password": "$2a$10$GSH.bT2nqnVNb0moE22Ly.xp0M3fW9FylTsJpMGAMEw6foJvgyhwG",
+      "login": "AmirK15",
+      "phone": "+996705008909",
       "orders": [],
       "id": 1
-    },
-    {
-      "email": "asdfas@sdf",
-      "password": "$2a$10$eKYGNOsUeJVOMLuv4bYfh.ivbFO8zKl7DUFKjVnjb.SsC3xKpM1iq",
-      "login": "asdf33232",
-      "phone": "23413",
-      "orders": [],
-      "id": 2
     }
   ],
   "closest": [

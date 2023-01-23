@@ -7,7 +7,7 @@ const Header = () => {
 
     const {t, i18n} = useTranslation()
 
-    const {user} = useContext(CustomContext)
+    const {user, logOutUser} = useContext(CustomContext)
 
     const changesLanguage = (lang) => {
         i18n.changeLanguage(lang)
@@ -77,7 +77,7 @@ const Header = () => {
                         </div>
                         {
                             user.login.length
-                                ? <Link to='/'>Выйти</Link>
+                                ? <Link to='/' onClick={() => logOutUser()}>Выйти</Link>
                                 : <Link to="/login">Войти</Link>
                         }
                     </div>
