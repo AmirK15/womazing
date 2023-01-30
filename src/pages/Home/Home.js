@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import {CustomContext} from "../../Context";
 import Arrivals from "./Arrivals/Arrivals";
+import Important from "./Important/Important";
+import Collection from "./Collection/Collection";
 
 const Home = () => {
 
@@ -9,8 +11,10 @@ const Home = () => {
     console.log(count)
 
     return (
-        <main>
+        <main className="home">
             <Arrivals/>
+            <Collection/>
+            <Important/>
         </main>
     );
 };

@@ -1,0 +1,11 @@
+.important{
+  .title{
+    margin: 37px 0 24px;
+  }
+  &__row{
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    column-gap: 75px;
+  }
+}

@@ -1,0 +1,30 @@
+.shop{
+  &__list{
+    margin: 114px 0 92px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &__item{
+    padding: 19px 65px;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover, &-active{
+      background: #000;
+      color: #fff;
+    }
+  }
+  &__row{
+    display: flex;
+    gap: 65px 30px;
+    flex-wrap: wrap;
+  }
+  &__card{
+    width: calc(33.33333% - 20px);
+    text-align: center;
+    &-img{
+      width: 100%;
+    }
+  }
+}

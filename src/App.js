@@ -1,6 +1,6 @@
 import React, {Suspense} from "react";
 import Layout from "./Layout/Layout";
-import './app.scss'
+import './style.scss'
 import './i18n'
 
 const App = () => {

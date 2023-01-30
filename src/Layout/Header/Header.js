@@ -18,8 +18,8 @@ const Header = () => {
     return (
         <header className="header">
             <div className="container">
-                <nav className="header__nav">
-                    <a href="#" className="header__logo">
+                <nav className="nav">
+                    <NavLink to="/" href="#" className="nav__logo">
                         <span>
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -32,24 +32,24 @@ const Header = () => {
                             </defs>
                         </svg>
                         </span>
-                        <h1 className="header__title">Womazing</h1>
-                    </a>
-                    <ul className="header__list">
-                        <li className="header__item">
-                            <NavLink className="header__link" to="/">{t("header.link1")}</NavLink>
+                        <h1 className="nav__title">Womazing</h1>
+                    </NavLink>
+                    <ul className="nav__list">
+                        <li className="nav__item">
+                            <NavLink className="nav__link" to="/">{t("header.link1")}</NavLink>
                         </li>
-                        <li className="header__item">
-                            <NavLink className="header__link" to="/shop">{t("header.link2")}</NavLink>
+                        <li className="nav__item">
+                            <NavLink className="nav__link" to="/shop">{t("header.link2")}</NavLink>
                         </li>
-                        <li className="header__item">
-                            <NavLink className="header__link" to="/brands">{t("header.link3")}</NavLink>
+                        <li className="nav__item">
+                            <NavLink className="nav__link" to="/brands">{t("header.link3")}</NavLink>
                         </li>
-                        <li className="header__item">
-                            <NavLink className="header__link" to="/contact">{t("header.link4")}</NavLink>
+                        <li className="nav__item">
+                            <NavLink className="nav__link" to="/contact">{t("header.link4")}</NavLink>
                         </li>
                     </ul>
-                    <div className="header__info">
-                        <a href="tel: +7 (495) 823-54-12" className="header__number">
+                    <div className="nav__info">
+                        <a href="tel: +7 (495) 823-54-12" className="nav__number">
                             <span>
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g>

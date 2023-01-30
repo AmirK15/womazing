@@ -8,13 +8,18 @@ export const Context = (props) => {
 
     const navigate = useNavigate()
 
-    const [count, setCount] = useState(1)
     const [user, setUser] = useState({
         login: ''
     })
+    const [shop, setShop] = useState([])
 
     useEffect(() => {
-        setUser(JSON.parse(localStorage.getItem('user')))
+        // if (localStorage.getItem('user') !== 'null') {
+        //     setUser(JSON.parse(localStorage.getItem('user')))
+        // }
+
+        axios('http://localhost:8080/clothes')
+            .then(({data}) => setShop(data))
     }, [])
 
     const registerUser = (data) => {
@@ -43,13 +48,12 @@ export const Context = (props) => {
     }
 
     const value = {
-        count,
-        setCount,
         user,
         setUser,
         registerUser,
         logOutUser,
-        loginUser
+        loginUser,
+        shop
     }
 
     return <CustomContext.Provider value={value}>

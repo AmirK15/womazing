@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 0.02em;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container{
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.nav{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo{
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    color: #000;
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  &__list{
+    display: flex;
+    column-gap: 45px;
+  }
+  &__info{
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+  }
+  &__number{
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    color: #000;
+  }
+  &__link{
+    color: #000;
+    &.active{
+      font-weight: 700;
+      color: #6E9C9F;
+    }
+  }
+}
+
+.title{
+  font-weight: 500;
+  font-size: 55px;
+}
+.title-section{
+  font-size: 40px;
+}
+.title-info{
+  font-size: 25px;
+}
+.title-card{
+  margin: 24px 0 7px;
+  font-size: 20px;
+}
+
+.desc{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: #000000;
+}
+
+.price{
+  font-weight: 500;
+  font-size: 15px;
+  color: #998E78;
+}
+
+.btn{
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 138.9%;
+  color: #FFFFFF;
+  padding: 22px 50px;
+  background: #6E9C9F;
+}
+
+.home{
+  position: relative;
+  &:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-130px);
+    content: '';
+    width: 705px;
+    height: 826px;
+    background: #F1EADC;
+  }
+}
+
+.form{
+  //max-width: 700px;
+  //height: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__title{
+    font-weight: 500;
+    font-size: 30px;
+    color: #000000;
+  }
+  &__input{
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid #6E9C9F;
+    font-weight: 500;
+    font-size: 17px;
+    padding-bottom: 15px;
+    &::placeholder{
+      color: #868686;
+    }
+  }
+  a{
+    font-weight: 600;
+    color: #6E9C9F;
+  }
+}
+
+@import "./Layout/Header/header";
+@import "./Layout/Footer/footer";
+@import "./pages/Home/Arrivals/arrivals";
+@import "./pages/Home/Collection/collection";
+@import "./pages/Home/Important/important";
+@import "./pages/Shop/shop";
