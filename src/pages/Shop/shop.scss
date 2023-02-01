@@ -20,11 +20,4 @@
     gap: 65px 30px;
     flex-wrap: wrap;
   }
-  &__card{
-    width: calc(33.33333% - 20px);
-    text-align: center;
-    &-img{
-      width: 100%;
-    }
-  }
 }
