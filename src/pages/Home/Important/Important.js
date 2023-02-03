@@ -8,7 +8,7 @@ const Important = () => {
     return (
         <section className="important">
             <div className="container">
-                <h3 className="title title-section">
+                <h3 className="title-section">
                     Что для нас важно
                 </h3>
                 <div className="important__row">

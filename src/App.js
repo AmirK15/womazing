@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Brands from "./pages/Brands/Brands";
 import NotFound from "./pages/NotFound/NotFound";
+import Product from "./pages/Product/Product"
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
                     <Route path='shop' element={<Shop/>}/>
                     <Route path='cart' element={<Cart/>}/>
                     <Route path='brands' element={<Brands/>}/>
+                    <Route path='product/:id' element={<Product/>}/>
                     <Route path='*' element={<NotFound/>}/>
                 </Route>
                 <Route path='/login' element={<Login/>}/>

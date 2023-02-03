@@ -9,6 +9,11 @@
   list-style: none;
   letter-spacing: 0.02em;
   font-family: 'Raleway', sans-serif;
+  transition: all 0.3s;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 500;
 }
 
 .container{
@@ -159,3 +164,4 @@
 @import "./pages/Home/Collection/collection";
 @import "./pages/Home/Important/important";
 @import "./pages/Shop/shop";
+@import "./pages/Product/product";
