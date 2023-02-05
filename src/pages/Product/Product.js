@@ -18,6 +18,7 @@ const Product = () => {
                 setProduct(data)
                 setColor(data.colors[0])
                 setSize(data.size[0])
+                window.scrollTo(0, 0)
             })
     }, [params])
 
@@ -26,27 +27,27 @@ const Product = () => {
             <div className="container">
                 {product.title && <>
                     <h2 className="title">{product.title}</h2>
-
+                    <p className="desc">Главная — Свитшоты — Свитшот Sweet Shot</p>
                     <div className="product__content">
                         <img className="product__content-img" src={`../${product.image.black}`} alt={product.title}/>
                         <div className="product__info">
                             <p className="product__content-price">${product.price}</p>
-                            <p>Выберите размер</p>
+                            <p className="product__content-choose-text">Выберите размер</p>
                             <ul className="product__content-choose">
                                 {
-                                    product.size.map((item) => (
-                                        <li onClick={() => setSize(item)}
+                                    product.size.map((item, idx) => (
+                                        <li key={idx} onClick={() => setSize(item)}
                                             className={`product__content-size ${item === size && 'product__content-size_active'}`}>
                                             {item}
                                         </li>
                                     ))
                                 }
                             </ul>
-                            <p>Выберите цвет</p>
+                            <p className="product__content-choose-text">Выберите цвет</p>
                             <ul className="product__content-choose">
                                 {
-                                    product.colors.map((item) => (
-                                        <li onClick={() => setColor(item)}
+                                    product.colors.map((item, idx) => (
+                                        <li key={idx} onClick={() => setColor(item)}
                                             style={{background: item}}
                                             className={`product__content-color ${item === color && 'product__content-color_active'}`}
                                         />

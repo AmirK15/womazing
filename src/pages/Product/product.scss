@@ -1,20 +1,38 @@
 .product{
+  .title{
+    margin: 64px 0 26px;
+  }
   &__row{
     display: flex;
     column-gap: 30px;
     flex-wrap: wrap;
+    margin: 67px 0 130px;
   }
   &__content{
+    margin: 102px 0 130px;
     display: flex;
+    align-items: center;
     column-gap: 74px;
     &-img{
       width: 50%;
       max-width: 536px;
     }
+    &-price{
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 110%;
+      color: #998E78;
+    }
     &-choose{
       display: flex;
       column-gap: 14px;
       align-items: center;
+      &-text{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 140%;
+        margin: 59px 0 34px;
+      }
     }
     &-size{
       cursor: pointer;
@@ -38,25 +56,32 @@
       width: 41px;
       height: 41px;
       border-radius: 50%;
-      border: 1px solid #9d9d9d;
+      border: 1px solid black;
       &_active{
         position: relative;
         &::before{
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
           content: '';
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background-color: #c9c9c9;
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: black;
+          //top: 50%;
+          //left: 50%;
+          //transform: translate(-50%, -50%);
+          //content: '';
+          //width: 10px;
+          //height: 10px;
+          //border-radius: 50%;
+          //background-color: #c9c9c9;
         }
       }
     }
     &-form{
       display: flex;
       column-gap: 11px;
+      margin-top: 59px;
     }
     &-input{
       width: 68px;

@@ -6,7 +6,7 @@ import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Shop from "./pages/Shop/Shop";
-import Cart from "./pages/Cart/Cart";
+import Basket from "./pages/Basket/Basket";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Brands from "./pages/Brands/Brands";
@@ -21,7 +21,7 @@ const App = () => {
                     <Route path='' element={<Home/>}/>
                     <Route path='contact' element={<Contact/>}/>
                     <Route path='shop' element={<Shop/>}/>
-                    <Route path='cart' element={<Cart/>}/>
+                    <Route path='basket' element={<Basket/>}/>
                     <Route path='brands' element={<Brands/>}/>
                     <Route path='product/:id' element={<Product/>}/>
                     <Route path='*' element={<NotFound/>}/>
