@@ -56,7 +56,7 @@ const Shop = () => {
                     }).filter((item, idx) => {
                         return idx + 1 <= page * 9 && idx >= page * 9 - 9
                     }).map(item => (
-                        <Card key={item.id} id={item.id} image={item.image} title={item.title} price={item.price}/>
+                        <Card key={item.id} id={item.id} image={item.image} title={item.title} price={item.price} sale={item.priceSale} stock={item.inStock}/>
                     ))}
                 </div>
                 {shop.filter(el => status === 'all' ? el : el.category === status).length > 9

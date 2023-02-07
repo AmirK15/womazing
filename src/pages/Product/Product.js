@@ -10,7 +10,8 @@ const Product = () => {
     const [product, setProduct] = useState({})
     const [color, setColor] = useState('')
     const [size, setSize] = useState('')
-    const {shop} = useContext(CustomContext)
+    const [count, setCount] = useState(1)
+    const {shop, addCart} = useContext(CustomContext)
 
     useEffect(() => {
         axios(`http://localhost:8080/clothes/${params.id}`)
@@ -18,7 +19,7 @@ const Product = () => {
                 setProduct(data)
                 setColor(data.colors[0])
                 setSize(data.size[0])
-                window.scrollTo(0, 0)
+                // window.scrollTo(0, 0)
             })
     }, [params])
 
@@ -31,7 +32,14 @@ const Product = () => {
                     <div className="product__content">
                         <img className="product__content-img" src={`../${product.image.black}`} alt={product.title}/>
                         <div className="product__info">
-                            <p className="product__content-price">${product.price}</p>
+                            {
+                                product.priceSale ?
+                                    <div className="product__content-price">
+                                        <span>${product.priceSale}</span>
+                                        <span className="product__content-price-line">${product.price}</span>
+                                    </div> :
+                                    <p className="product__content-price">${product.price}</p>
+                            }
                             <p className="product__content-choose-text">Выберите размер</p>
                             <ul className="product__content-choose">
                                 {
@@ -54,9 +62,21 @@ const Product = () => {
                                     ))
                                 }
                             </ul>
+                            {
+                                product.inStock ? <p className="product__content-choose-text">В наличии: <span>{product.inStock}</span></p> : <p className="product__content-choose-text">Нет в наличии</p>
+                            }
                             <div className='product__content-form'>
-                                <input className='product__content-input' min='1' defaultValue='1' type="number"/>
-                                <button type='button' className='btn'>Добавить в корзину</button>
+                                <input onChange={(e) => setCount(e.target.value)} value={count} className='product__content-input' disabled={!product.inStock} min='1' max={product.inStock} type="number"/>
+                                <button onClick={() => addCart({
+                                    id: product.id,
+                                    title: product.title,
+                                    image: product.image,
+                                    color,
+                                    size,
+                                    count,
+                                    price: product.priceSale || product.prise,
+                                    category: product.category
+                                })} type='button' className='btn' disabled={!product.inStock}>Добавить в корзину</button>
                             </div>
                         </div>
 

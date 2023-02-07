@@ -68,6 +68,7 @@ h1,h2,h3,h4,h5,h6{
 .title{
   font-weight: 500;
   font-size: 55px;
+  margin: 146px 0 26px;
 }
 .title-section{
   font-size: 40px;
@@ -91,6 +92,10 @@ h1,h2,h3,h4,h5,h6{
   font-weight: 500;
   font-size: 15px;
   color: #998E78;
+  &-line{
+    text-decoration: line-through;
+    color: #9C9C9C;
+  }
 }
 
 .btn{
@@ -101,6 +106,18 @@ h1,h2,h3,h4,h5,h6{
   color: #FFFFFF;
   padding: 22px 50px;
   background: #6E9C9F;
+  &:hover{
+    background: #509498;
+  }
+  &-bg{
+    border: 1px solid #6E9C9F;
+    background: transparent;
+    color: #6E9C9F;
+    &:hover{
+      color: #fff;
+      background: #6E9C9F;
+    }
+  }
 }
 
 .home{
@@ -121,6 +138,7 @@ h1,h2,h3,h4,h5,h6{
   width: calc(33.33333% - 20px);
   text-align: center;
   &__img{
+    position: relative;
     width: 100%;
   }
 }
@@ -165,3 +183,4 @@ h1,h2,h3,h4,h5,h6{
 @import "./pages/Home/Important/important";
 @import "./pages/Shop/shop";
 @import "./pages/Product/product";
+@import "./pages/Basket/basket";

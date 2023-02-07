@@ -11,6 +11,13 @@ export const Context = (props) => {
     const [user, setUser] = useState({
         login: ''
     })
+
+    const [cart, setCart] = useState([])
+
+    const addCart = (product) => {
+        setCart([...cart, product])
+    }
+
     const [shop, setShop] = useState([])
 
     useEffect(() => {
@@ -53,7 +60,10 @@ export const Context = (props) => {
         registerUser,
         logOutUser,
         loginUser,
-        shop
+        addCart,
+        shop,
+        cart,
+        setCart
     }
 
     return <CustomContext.Provider value={value}>
