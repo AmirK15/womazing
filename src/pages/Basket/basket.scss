@@ -17,18 +17,24 @@
     }
   }
   &__item{
-    width: 15%;
+    width: 12%;
     &:nth-child(1){
       width: 40%;
       display: flex;
       align-items: center;
       column-gap: 35px;
     }
-    &:nth-child(3){
-      width: 30%;
+    &:nth-child(5){
+      width: 15%;
+    }
+    &:nth-child(6), :nth-child(4){
+      width: 9%;
     }
     &-img{
       width: 140px;
+    }
+    span{
+      cursor: pointer;
     }
     input{
       width: 47px;

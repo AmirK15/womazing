@@ -15,7 +15,26 @@ export const Context = (props) => {
     const [cart, setCart] = useState([])
 
     const addCart = (product) => {
-        setCart([...cart, product])
+
+        let idx = cart.findIndex((item) => item.id === product.id && item.color === product.color && item.size === product.size)
+
+        if (idx >= 0){
+            setCart(cart.map(item => {
+                if (item.id === product.id && item.color === product.color && item.size === product.size){
+                    return {...item, count: +item.count + +product.count}
+                } else {
+                    return item
+                }
+            }))
+        } else{
+            setCart([...cart, product])
+        }
+    }
+
+    const deleteCart = (id, color, size) => {
+        setCart(cart.filter((item) => {
+            return item.id !== id && item.color !== color && item.size !== size
+        }))
     }
 
     const [shop, setShop] = useState([])
@@ -61,6 +80,7 @@ export const Context = (props) => {
         logOutUser,
         loginUser,
         addCart,
+        deleteCart,
         shop,
         cart,
         setCart

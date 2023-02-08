@@ -1,10 +1,10 @@
 import React, {useContext} from 'react';
-import Img from '../../assets/image.png'
+import {Link} from 'react-router-dom'
 import {CustomContext} from "../../Context";
 
 const Basket = () => {
 
-    const {cart} = useContext(CustomContext)
+    const {cart, deleteCart, setCart} = useContext(CustomContext)
 
     return (
         <section className='basket'>
@@ -12,6 +12,8 @@ const Basket = () => {
                 <h2 className="title">Корзина</h2>
                 <ul className='basket__list basket__list-top'>
                     <li className='basket__item'>Товар</li>
+                    <li className='basket__item'>Размер</li>
+                    <li className='basket__item'>Цвет</li>
                     <li className='basket__item'>Цена</li>
                     <li className='basket__item'>Количество</li>
                     <li className='basket__item'>Всего</li>
@@ -19,27 +21,35 @@ const Basket = () => {
                 <hr/>
                 {
                     cart.map((item, idx) => (
-                        <div key={idx} className="basket__list">
-                            <div className="basket__item">
-                                <span>
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L13 13M13 1L1 13" stroke="black"/>
-                            </svg>
-                                    </span>
-                                <img className='basket__item-img' src={item.image.black} alt={item.title}/>
+                        <ul key={idx} className="basket__list">
+                            <li className="basket__item">
+                                <span onClick={() => deleteCart(item.id, item.color, item.size)}>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L13 13M13 1L1 13" stroke="black"/>
+                                    </svg>
+                                </span>
+                                <Link to={`/product/${item.id}`}>
+                                    <img className='basket__item-img' src={item.image.black} alt={item.title}/>
+                                </Link>
                                 <p className='desc'>{item.title}</p>
-                            </div>
-                            <div className="basket__item">
+                            </li>
+                            <li className="basket__item">
+                                <p className='desc' style={{textTransform: "uppercase"}}>{item.size}</p>
+                            </li>
+                            <li className="basket__item">
+                                <p className='desc' style={{color: item.color === 'white' || item.color === 'beige' ? 'black' : item.color}}>{item.color}</p>
+                            </li>
+                            <li className="basket__item">
                                 <p className='desc'>${item.price}</p>
-                            </div>
-                            <div className="basket__item">
+                            </li>
+                            <li className="basket__item">
                                 <input min='1' defaultValue={item.count} type="number"/>
-                            </div>
-                            <div className="basket__item">
+                            </li>
+                            <li className="basket__item">
                                 <p className='desc'>${item.price * item.count}</p>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     ))
                 }
                 <div className="basket__bottom">
@@ -49,18 +59,19 @@ const Basket = () => {
                             Применить купон
                         </button>
                     </div>
-                    <button className="btn btn-bg">
+                    <button onClick={() => setCart([])} className="btn btn-bg">
                         Обновить корзину
                     </button>
                 </div>
                 <div className="basket__total">
                     <p className="basket__total-subtotal">
-                        Подытог: $129
+                        Подытог: $
+                        {cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)}
                     </p>
                     <div className="basket__total-info">
                         <div className="basket__total-price">
                             <p>Итого:</p>
-                            <p>$129</p>
+                            <span>${cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)}</span>
                         </div>
                         <button className="btn">Оформить заказ</button>
                     </div>

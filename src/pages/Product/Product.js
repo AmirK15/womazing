@@ -74,7 +74,7 @@ const Product = () => {
                                     color,
                                     size,
                                     count,
-                                    price: product.priceSale || product.prise,
+                                    price: product.priceSale || product.price,
                                     category: product.category
                                 })} type='button' className='btn' disabled={!product.inStock}>Добавить в корзину</button>
                             </div>
