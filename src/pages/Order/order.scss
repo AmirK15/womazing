@@ -1,0 +1,15 @@
+.order{
+  .desc{
+    margin-top: 17px;
+  }
+  &__content{
+    margin: 220px 0 136px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__framed{
+    display: flex;
+    align-items: center;
+    column-gap: 44px;
+  }
+}

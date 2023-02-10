@@ -10,7 +10,7 @@ const Checkout = () => {
             <div className="container">
                 <h2 className="title">Оформление заказа</h2>
 
-                <form onSubmit={() => navigate('/basket')} className="checkout__form">
+                <form onSubmit={() => navigate('/order')} className="checkout__form">
                     <div className="checkout__buyer">
                         <h3 className="title-info">Данные покупателя</h3>
                         <input type="text" className="checkout__input" placeholder="Имя"/>
