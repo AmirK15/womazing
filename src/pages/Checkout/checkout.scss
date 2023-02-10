@@ -1,0 +1,57 @@
+.checkout{
+  &__form{
+    margin: 214px 0 130px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 63px 295px;
+  }
+  &__buyer{
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__order{
+    &-item{
+      font-weight: 500;
+      font-size: 20px;
+    }
+    &-info{
+      margin-top: 47px;
+      display: flex;
+      column-gap: 73px;
+    }
+    &-list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+  &__label{
+    margin: 48px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    input{
+      width: 22px;
+      height: 22px;
+      border: 1px solid #000000;
+      padding: 6px;
+    }
+  }
+  &__input{
+    margin-top: 20px;
+    width: 100%;
+    padding: 16px 0;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: #868686;
+    border: none;
+    border-bottom: 1px solid #000000;
+    &-area{
+      padding-bottom: 110px;
+      resize: none;
+    }
+  }
+}

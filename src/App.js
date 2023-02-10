@@ -12,6 +12,7 @@ import Register from "./pages/Register/Register";
 import Brands from "./pages/Brands/Brands";
 import NotFound from "./pages/NotFound/NotFound";
 import Product from "./pages/Product/Product"
+import Checkout from "./pages/Checkout/Checkout";
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
                     <Route path='shop' element={<Shop/>}/>
                     <Route path='basket' element={<Basket/>}/>
                     <Route path='brands' element={<Brands/>}/>
+                    <Route path='checkout' element={<Checkout/>}/>
                     <Route path='product/:id' element={<Product/>}/>
                     <Route path='*' element={<NotFound/>}/>
                 </Route>

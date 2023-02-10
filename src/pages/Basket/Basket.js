@@ -70,7 +70,9 @@ const Basket = () => {
                                 : price
                             }</span>
                         </div>
-                        <button className="btn">Оформить заказ</button>
+                        <Link to='/checkout'>
+                            <button className="btn">Оформить заказ</button>
+                        </Link>
                     </div>
                 </div>
             </div>
