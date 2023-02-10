@@ -31,6 +31,22 @@
       "phone": "23",
       "orders": [],
       "id": 4
+    },
+    {
+      "email": "amirr@mail.ru",
+      "password": "$2a$10$uV2yio7t5CDRsF6JqUosN.Uttv2W9RUwktVHtOla0vd3Dul4MYk9m",
+      "login": "qwerty",
+      "phone": "123456",
+      "orders": [],
+      "id": 5
+    },
+    {
+      "email": "ale@mail.ru",
+      "password": "$2a$10$9OO6QcN0rlPztQ6OAUyax.z8vF/lO1vw3CBCmpeCvwUYeodss8CDe",
+      "login": "ale",
+      "phone": "1234",
+      "orders": [],
+      "id": 6
     }
   ],
   "clothes": [

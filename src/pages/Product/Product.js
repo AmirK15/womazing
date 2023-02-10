@@ -66,7 +66,15 @@ const Product = () => {
                                 product.inStock ? <p className="product__content-choose-text">В наличии: <span>{product.inStock}</span></p> : <p className="product__content-choose-text">Нет в наличии</p>
                             }
                             <div className='product__content-form'>
-                                <input onChange={(e) => setCount(e.target.value)} value={count} className='product__content-input' disabled={!product.inStock} min='1' max={product.inStock} type="number"/>
+                                <input
+                                    onChange={(e) => setCount(e.target.value >= product.inStock ? product.inStock : e.target.value)}
+                                    value={count}
+                                    className='product__content-input'
+                                    disabled={!product.inStock}
+                                    min='1'
+                                    max={product.inStock}
+                                    type="number"
+                                />
                                 <button onClick={() => addCart({
                                     id: product.id,
                                     title: product.title,

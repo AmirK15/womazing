@@ -1,10 +1,11 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom'
 import {CustomContext} from "../../Context";
+import BasketCard from "./BasketCard";
 
 const Basket = () => {
 
-    const {cart, deleteCart, setCart} = useContext(CustomContext)
+    const {cart, setCart} = useContext(CustomContext)
 
     return (
         <section className='basket'>
@@ -21,35 +22,7 @@ const Basket = () => {
                 <hr/>
                 {
                     cart.map((item, idx) => (
-                        <ul key={idx} className="basket__list">
-                            <li className="basket__item">
-                                <span onClick={() => deleteCart(item.id, item.color, item.size)}>
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L13 13M13 1L1 13" stroke="black"/>
-                                    </svg>
-                                </span>
-                                <Link to={`/product/${item.id}`}>
-                                    <img className='basket__item-img' src={item.image.black} alt={item.title}/>
-                                </Link>
-                                <p className='desc'>{item.title}</p>
-                            </li>
-                            <li className="basket__item">
-                                <p className='desc' style={{textTransform: "uppercase"}}>{item.size}</p>
-                            </li>
-                            <li className="basket__item">
-                                <p className='desc' style={{color: item.color === 'white' || item.color === 'beige' ? 'black' : item.color}}>{item.color}</p>
-                            </li>
-                            <li className="basket__item">
-                                <p className='desc'>${item.price}</p>
-                            </li>
-                            <li className="basket__item">
-                                <input min='1' defaultValue={item.count} type="number"/>
-                            </li>
-                            <li className="basket__item">
-                                <p className='desc'>${item.price * item.count}</p>
-                            </li>
-                        </ul>
+                        <BasketCard key={idx} item={item}/>
                     ))
                 }
                 <div className="basket__bottom">

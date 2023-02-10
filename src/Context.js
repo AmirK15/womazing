@@ -31,21 +31,43 @@ export const Context = (props) => {
         }
     }
 
+    const updateCart = (id, color, size, count) => {
+        setCart(cart.map((item) => {
+            if (item.id === id && item.color === color && item.size === size){
+                return {...item, count: count}
+            } else{
+                return item
+            }
+        }))
+    }
+
     const deleteCart = (id, color, size) => {
         setCart(cart.filter((item) => {
-            return item.id !== id && item.color !== color && item.size !== size
+            return item.id !== id || item.color !== color || item.size !== size
         }))
     }
 
     const [shop, setShop] = useState([])
 
     useEffect(() => {
-        // if (localStorage.getItem('user') !== 'null') {
-        //     setUser(JSON.parse(localStorage.getItem('user')))
-        // }
+        if (localStorage.getItem('user') !== 'null') {
+            setUser(JSON.parse(localStorage.getItem('user')))
+        }
+
+        if (localStorage.getItem('cart') !== null){
+            setCart(JSON.parse(localStorage.getItem('cart')))
+        }
 
         axios('http://localhost:8080/clothes')
             .then(({data}) => setShop(data))
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }, [cart])
+
+    useEffect(() => {
+        localStorage.setItem('user', JSON.stringify(user))
     }, [])
 
     const registerUser = (data) => {
@@ -68,6 +90,7 @@ export const Context = (props) => {
 
     const logOutUser = () => {
         localStorage.removeItem('user')
+        localStorage.removeItem('cart')
         setUser({
             login: ''
         })
@@ -81,6 +104,7 @@ export const Context = (props) => {
         loginUser,
         addCart,
         deleteCart,
+        updateCart,
         shop,
         cart,
         setCart
