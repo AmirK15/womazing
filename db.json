@@ -627,5 +627,25 @@
       ],
       "inStock": 14
     }
+  ],
+  "tickets": [
+    {
+      "id": 1,
+      "title": "itrun",
+      "sum": 5,
+      "count": 30
+    },
+    {
+      "id": 2,
+      "title": "Sabina",
+      "sum": 15,
+      "count": 5
+    },
+    {
+      "id": 3,
+      "title": "Ruslan",
+      "sum": 25,
+      "count": 100
+    }
   ]
 }

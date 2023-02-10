@@ -1,11 +1,26 @@
-import React, {useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import {Link} from 'react-router-dom'
 import {CustomContext} from "../../Context";
 import BasketCard from "./BasketCard";
+import axios from "axios";
 
 const Basket = () => {
 
+    const [ticket, setTicket] = useState([])
+
     const {cart, setCart} = useContext(CustomContext)
+
+    let price = cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)
+
+    // console.log(price / 100 * ticket)
+
+    const useTicket = (e) => {
+        e.preventDefault()
+        axios(`http://localhost:8080/tickets?title=${e.target[0].value}`)
+            .then(({data}) => {
+                data.length ? setTicket(data) : setTicket(null)
+            })
+    }
 
     return (
         <section className='basket'>
@@ -26,12 +41,18 @@ const Basket = () => {
                     ))
                 }
                 <div className="basket__bottom">
-                    <div className="basket__discount">
+                    <form onSubmit={useTicket} className="basket__discount">
                         <input className="basket__discount-input" type="text" placeholder='Введите купон'/>
-                        <button className="btn btn-bg">
+                        <button type='submit' className="btn btn-bg">
                             Применить купон
                         </button>
-                    </div>
+                        <p className="desc">
+                            {Array.isArray(ticket) && ticket.length
+                                ? `По данному промокоду вы получаете скидку в размере ${ticket[0].sum} %`
+                                : ticket === null ? 'По данному промокоду скидок нет' : ''
+                            }
+                        </p>
+                    </form>
                     <button onClick={() => setCart([])} className="btn btn-bg">
                         Обновить корзину
                     </button>
@@ -39,12 +60,15 @@ const Basket = () => {
                 <div className="basket__total">
                     <p className="basket__total-subtotal">
                         Подытог: $
-                        {cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)}
+                        {price}
                     </p>
                     <div className="basket__total-info">
                         <div className="basket__total-price">
                             <p>Итого:</p>
-                            <span>${cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)}</span>
+                            <span>${Array.isArray(ticket) && ticket.length
+                                ? price - price / 100 * ticket[0].sum
+                                : price
+                            }</span>
                         </div>
                         <button className="btn">Оформить заказ</button>
                     </div>

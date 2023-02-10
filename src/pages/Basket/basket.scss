@@ -51,6 +51,11 @@
     justify-content: space-between;
   }
   &__discount{
+    .desc{
+      position: absolute;
+      bottom: -40px;
+    }
+    position: relative;
     display: flex;
     column-gap: 16px;
     &-input{
