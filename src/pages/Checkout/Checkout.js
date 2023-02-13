@@ -1,62 +1,85 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {useNavigate} from 'react-router-dom'
+import {CustomContext} from "../../Context";
+import {useForm} from "react-hook-form";
+import axios from "axios";
 
 const Checkout = () => {
 
+    const {cart, ticket, price, user} = useContext(CustomContext)
+
+    const {reset, register, handleSubmit} = useForm()
+
     const navigate = useNavigate()
+
+    const addOrder = (data) => {
+        axios.post('http://localhost:8080/orders', {
+            ...data,
+            clothes: cart,
+            price: Array.isArray(ticket) && ticket.length
+                ? price - price / 100 * ticket[0].sum
+                : price,
+            user
+        }).then(() => navigate('/order'))
+        console.log(data)
+    }
 
     return (
         <section className="checkout">
             <div className="container">
                 <h2 className="title">Оформление заказа</h2>
 
-                <form onSubmit={() => navigate('/order')} className="checkout__form">
+                <form onSubmit={handleSubmit(addOrder)} className="checkout__form">
                     <div className="checkout__buyer">
                         <h3 className="title-info">Данные покупателя</h3>
-                        <input type="text" className="checkout__input" placeholder="Имя"/>
-                        <input type="email" className="checkout__input" placeholder="E-mail"/>
-                        <input type="tel" className="checkout__input" placeholder="Телефон"/>
+                        <input {...register("name")} type="text" className="checkout__input" placeholder="Имя"/>
+                        <input {...register("email")} type="email" className="checkout__input" placeholder="E-mail"/>
+                        <input {...register("phone")} type="tel" className="checkout__input" placeholder="Телефон"/>
                     </div>
                     <div className="checkout__order">
                         <h3 className="title-info">Ваш заказ</h3>
                         <div className="checkout__order-info">
                             <ul className="checkout__order-list">
-                                <li className="checkout__order-item">
-                                    Товар
+                                <li className="checkout__order-titles">
+                                    <p>Товар</p>
+                                    <p>Всего</p>
                                 </li>
-                                <li className="desc">
-                                    Футболка USA
+                                {
+                                    cart.map((item, idx) => (
+                                        <li key={idx} className="checkout__order-item">
+                                            <div className="checkout__order-block">
+                                                <p className="desc">{item.title}</p>
+                                                <p className="desc">{item.count}</p>
+                                            </div>
+                                            <div className="checkout__order-block">
+                                                <p className="desc" style={{color: item.color === 'white' || item.color === 'beige' ? 'black' : item.color}}>{item.color}</p>
+                                                <p className="desc" style={{textTransform: "uppercase"}}>{item.size}</p>
+                                                <p className="desc">${item.count * item.price}</p>
+                                            </div>
+                                        </li>
+                                    ))
+                                }
+                                <li className="checkout__order-titles">
+                                    <p>Подытог</p>
+                                    <p>${price}</p>
                                 </li>
-                                <li className="desc">
-                                    Подытог
-                                </li>
-                                <li className="desc">
-                                    Итого
-                                </li>
-                            </ul>
-                            <ul className="checkout__order-list">
-                                <li className="checkout__order-item">
-                                    Всего
-                                </li>
-                                <li className="desc">
-                                    $129
-                                </li>
-                                <li className="desc">
-                                    $129
-                                </li>
-                                <li className="desc">
-                                    $129
+                                <li className="checkout__order-titles">
+                                    <p>Итого</p>
+                                    <p>${Array.isArray(ticket) && ticket.length
+                                        ? price - price / 100 * ticket[0].sum
+                                        : price
+                                    }</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div className="checkout__buyer">
                         <h3 className="title-info">Адрес получателя</h3>
-                        <input type="text" className="checkout__input" placeholder="Страна"/>
-                        <input type="text" className="checkout__input" placeholder="Город"/>
-                        <input type="text" className="checkout__input" placeholder="Улица"/>
-                        <input type="text" className="checkout__input" placeholder="Дом"/>
-                        <input type="text" className="checkout__input" placeholder="Квартира"/>
+                        <input {...register("county")} type="text" className="checkout__input" placeholder="Страна"/>
+                        <input {...register("city")} type="text" className="checkout__input" placeholder="Город"/>
+                        <input {...register("street")} type="text" className="checkout__input" placeholder="Улица"/>
+                        <input {...register("home")} type="text" className="checkout__input" placeholder="Дом"/>
+                        <input {...register("flat")} type="text" className="checkout__input" placeholder="Квартира"/>
                     </div>
                     <div className="checkout__pay">
                         <h3 className="title-info">Способы оплаты</h3>
@@ -68,7 +91,7 @@ const Checkout = () => {
                     </div>
                     <div className="checkout__buyer">
                         <h3 className="title-info">Комментарии</h3>
-                        <textarea className="checkout__input checkout__input-area" placeholder='Страна'></textarea>
+                        <textarea {...register("message")} className="checkout__input checkout__input-area" placeholder='Страна'/>
                     </div>
                 </form>
 

@@ -47,6 +47,10 @@ export const Context = (props) => {
         }))
     }
 
+    const [ticket, setTicket] = useState([])
+    let price = cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)
+
+
     const [shop, setShop] = useState([])
 
     useEffect(() => {
@@ -107,7 +111,10 @@ export const Context = (props) => {
         updateCart,
         shop,
         cart,
-        setCart
+        setCart,
+        ticket,
+        setTicket,
+        price
     }
 
     return <CustomContext.Provider value={value}>

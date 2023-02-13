@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom'
 import {CustomContext} from "../../Context";
 import BasketCard from "./BasketCard";
@@ -6,13 +6,7 @@ import axios from "axios";
 
 const Basket = () => {
 
-    const [ticket, setTicket] = useState([])
-
-    const {cart, setCart} = useContext(CustomContext)
-
-    let price = cart.reduce((acc, rec) => acc + rec.count * rec.price, 0)
-
-    // console.log(price / 100 * ticket)
+    const {cart, setCart, ticket, setTicket, price} = useContext(CustomContext)
 
     const useTicket = (e) => {
         e.preventDefault()

@@ -647,5 +647,53 @@
       "sum": 25,
       "count": 100
     }
+  ],
+  "orders": [
+    {
+      "name": "Amir",
+      "email": "amir@mail.ru",
+      "phone": "1234",
+      "county": "kg",
+      "city": "bishkek",
+      "street": "michurina",
+      "home": "11",
+      "flat": "28",
+      "message": "ljfs",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": {
+            "black": "Shop/hoody2.jpg",
+            "white": "Shop/hoody2-white.jpg"
+          },
+          "color": "black",
+          "size": "s",
+          "count": 2,
+          "price": 300,
+          "category": "hoody"
+        },
+        {
+          "id": 4,
+          "title": "Hoody Wendy",
+          "image": {
+            "black": "Shop/hoody4.jpg",
+            "white": "Shop/hoody4-white.jpg",
+            "red": "Shop/hoody4-red.jpg",
+            "grey": "Shop/hoody4-grey.jpg"
+          },
+          "color": "red",
+          "size": "s",
+          "count": 2,
+          "price": 75,
+          "category": "hoody"
+        }
+      ],
+      "price": 750,
+      "user": {
+        "login": ""
+      },
+      "id": 1
+    }
   ]
 }
