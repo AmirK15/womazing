@@ -47,6 +47,34 @@
       "phone": "1234",
       "orders": [],
       "id": 6
+    },
+    {
+      "email": "email@email",
+      "password": "$2a$10$uR4hz8XDTQCf4n4wGRCjyui6cG5q0P7P.YUC6QybEj6whtl9jt0r.",
+      "login": "email",
+      "phone": "123",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 2,
+              "title": "Hoody Harley Queen",
+              "image": {
+                "black": "Shop/hoody2.jpg",
+                "white": "Shop/hoody2-white.jpg"
+              },
+              "color": "black",
+              "size": "s",
+              "count": 1,
+              "price": 300,
+              "category": "hoody"
+            }
+          ],
+          "price": 285,
+          "date": "2023-02-14T19:24:39.802Z"
+        }
+      ],
+      "id": 7
     }
   ],
   "clothes": [
@@ -633,7 +661,7 @@
       "id": 1,
       "title": "itrun",
       "sum": 5,
-      "count": 30
+      "count": 29
     },
     {
       "id": 2,
@@ -648,52 +676,5 @@
       "count": 100
     }
   ],
-  "orders": [
-    {
-      "name": "Amir",
-      "email": "amir@mail.ru",
-      "phone": "1234",
-      "county": "kg",
-      "city": "bishkek",
-      "street": "michurina",
-      "home": "11",
-      "flat": "28",
-      "message": "ljfs",
-      "clothes": [
-        {
-          "id": 2,
-          "title": "Hoody Harley Queen",
-          "image": {
-            "black": "Shop/hoody2.jpg",
-            "white": "Shop/hoody2-white.jpg"
-          },
-          "color": "black",
-          "size": "s",
-          "count": 2,
-          "price": 300,
-          "category": "hoody"
-        },
-        {
-          "id": 4,
-          "title": "Hoody Wendy",
-          "image": {
-            "black": "Shop/hoody4.jpg",
-            "white": "Shop/hoody4-white.jpg",
-            "red": "Shop/hoody4-red.jpg",
-            "grey": "Shop/hoody4-grey.jpg"
-          },
-          "color": "red",
-          "size": "s",
-          "count": 2,
-          "price": 75,
-          "category": "hoody"
-        }
-      ],
-      "price": 750,
-      "user": {
-        "login": ""
-      },
-      "id": 1
-    }
-  ]
+  "orders": []
 }

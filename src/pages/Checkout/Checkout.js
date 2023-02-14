@@ -6,22 +6,59 @@ import axios from "axios";
 
 const Checkout = () => {
 
-    const {cart, ticket, price, user} = useContext(CustomContext)
+    const {cart, setCart, ticket, price, user, setUser} = useContext(CustomContext)
 
     const {reset, register, handleSubmit} = useForm()
 
     const navigate = useNavigate()
 
-    const addOrder = (data) => {
-        axios.post('http://localhost:8080/orders', {
+    const addOrder = async (data) => {
+        await axios.post('http://localhost:8080/orders', {
             ...data,
             clothes: cart,
             price: Array.isArray(ticket) && ticket.length
                 ? price - price / 100 * ticket[0].sum
                 : price,
-            user
-        }).then(() => navigate('/order'))
+            userEmail: user.email,
+            date: new Date()
+        }).then(() => console.log('Success'))
         console.log(data)
+
+        await axios.patch(`http://localhost:8080/users/${user.id}`, {
+            orders: [
+                // ...user.orders,
+                {
+                    clothes: cart,
+                    price: Array.isArray(ticket) && ticket.length
+                        ? price - price / 100 * ticket[0].sum
+                        : price,
+                    date: new Date()
+                }
+            ]
+        }).then(() => console.log('Success'))
+
+        await axios(`http://localhost:8080/users/${user.id}`)
+            .then((res) => setUser(res.data))
+
+
+        await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ?
+
+            axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {
+                count: ticket[0].count - 1
+            }).then(() => console.log('use ticket')) :
+
+            ticket[0].count === 1 ?
+
+                axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`)
+                    .then(() => console.log('delete ticket')) :
+
+                console.log('error')
+
+
+
+        await reset()
+        await setCart([])
+        await navigate('/order')
     }
 
     return (
@@ -52,7 +89,8 @@ const Checkout = () => {
                                                 <p className="desc">{item.count}</p>
                                             </div>
                                             <div className="checkout__order-block">
-                                                <p className="desc" style={{color: item.color === 'white' || item.color === 'beige' ? 'black' : item.color}}>{item.color}</p>
+                                                <p className="desc"
+                                                   style={{color: item.color === 'white' || item.color === 'beige' ? 'black' : item.color}}>{item.color}</p>
                                                 <p className="desc" style={{textTransform: "uppercase"}}>{item.size}</p>
                                                 <p className="desc">${item.count * item.price}</p>
                                             </div>
@@ -91,11 +129,10 @@ const Checkout = () => {
                     </div>
                     <div className="checkout__buyer">
                         <h3 className="title-info">Комментарии</h3>
-                        <textarea {...register("message")} className="checkout__input checkout__input-area" placeholder='Страна'/>
+                        <textarea {...register("message")} className="checkout__input checkout__input-area"
+                                  placeholder='Страна'/>
                     </div>
                 </form>
-
-
             </div>
         </section>
     );
