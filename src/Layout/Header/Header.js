@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {CustomContext} from "../../Context";
 import {NavLink, Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import {FaUserAlt} from 'react-icons/fa'
 
 const Header = () => {
 
@@ -82,11 +83,16 @@ const Header = () => {
                             <button className={`header__btn ${i18n.language === "ru" && 'header__btn-active'}`} onClick={() => changesLanguage('ru')}>Ru</button>
                             <button className={`header__btn ${i18n.language === "en" && 'header__btn-active'}`} onClick={() => changesLanguage('en')}>En</button>
                         </div>
-                        {
-                            user.login.length
-                                ? <Link className="desc" to='/' onClick={() => logOutUser()}>{t("header.logout")}</Link>
-                                : <Link className="desc" to="/login">{t("header.login")}</Link>
-                        }
+                        <div className="header__profile">
+                            {
+                                user.login.length ? <Link to='/profile'><FaUserAlt color='#6E9C9F' fontSize='20px'/></Link> : ''
+                            }
+                            {
+                                user.login.length
+                                    ? <Link className="desc" to='/' onClick={() => logOutUser()}>{t("header.logout")}</Link>
+                                    : <Link className="desc" to="/login">{t("header.login")}</Link>
+                            }
+                        </div>
                     </div>
                 </nav>
             </div>

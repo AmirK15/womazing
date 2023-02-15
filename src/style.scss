@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6{
 .title{
   font-weight: 500;
   font-size: 55px;
-  margin: 146px 0 26px;
+  margin: 90px 0 26px;
 }
 .title-section{
   font-size: 40px;
@@ -169,8 +169,9 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 500;
     font-size: 17px;
     padding-bottom: 15px;
+    color: #696969;
     &::placeholder{
-      color: #868686;
+      color: #696969;
     }
   }
   a{
@@ -189,3 +190,4 @@ h1,h2,h3,h4,h5,h6{
 @import "./pages/Basket/basket";
 @import "./pages/Checkout/checkout";
 @import "./pages/Order/order";
+@import "./pages/Profile/profile";

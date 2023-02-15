@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Product from "./pages/Product/Product"
 import Checkout from "./pages/Checkout/Checkout";
 import Order from "./pages/Order/Order";
+import Profile from "./pages/Profile/Profile";
 
 const App = () => {
     return (
@@ -27,6 +28,7 @@ const App = () => {
                     <Route path='brands' element={<Brands/>}/>
                     <Route path='checkout' element={<Checkout/>}/>
                     <Route path='order' element={<Order/>}/>
+                    <Route path='profile' element={<Profile/>}/>
                     <Route path='product/:id' element={<Product/>}/>
                     <Route path='*' element={<NotFound/>}/>
                 </Route>

@@ -30,12 +30,14 @@
       position: absolute;
       bottom: -54px;
       left: -130px;
+      z-index: 2;
     }
     &:after{
       content: url("../../../assets/arrivals/after.png");
       position: absolute;
       top: 123px;
       right: -81px;
+      z-index: 2;
     }
   }
 }

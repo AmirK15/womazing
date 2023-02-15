@@ -14,9 +14,7 @@ const Shop = () => {
     return (
         <section className="shop">
             <div className="container">
-                <h2 className="title">
-                    Магазин
-                </h2>
+                <h2 className="title">Магазин</h2>
 
                 <ul className="shop__list">
                     <li onClick={() => setStatus('all')}

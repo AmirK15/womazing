@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {CustomContext} from "../../Context";
 import {Link, useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
+import InputMask from 'react-input-mask'
 
 const Register = () => {
 
@@ -33,7 +34,8 @@ const Register = () => {
                     type="text"
                     placeholder="Введите login"/>
 
-                <input
+                <InputMask
+                    mask={'+\\9\\96(999)99-99-99'}
                     className="form__input"
                     {...register('phone')}
                     type="tel"

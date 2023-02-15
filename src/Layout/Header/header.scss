@@ -36,4 +36,9 @@
       color: #fff;
     }
   }
+  &__profile{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
 }

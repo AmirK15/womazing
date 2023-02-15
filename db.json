@@ -105,6 +105,14 @@
         }
       ],
       "id": 8
+    },
+    {
+      "email": "hasbi@mail",
+      "password": "$2a$10$1vnQ6Lw6fDb1WXSbh7Wi4u5.ArBvHHud0ODMg/NYO/KL29OSR/yA2",
+      "login": "hasbi",
+      "phone": "123123",
+      "orders": [],
+      "id": 9
     }
   ],
   "clothes": [
