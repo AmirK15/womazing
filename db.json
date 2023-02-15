@@ -75,6 +75,36 @@
         }
       ],
       "id": 7
+    },
+    {
+      "email": "ali@mail.ru",
+      "password": "$2a$10$w5RP7OSuId6XdRo95enEBuwAsoo1eZHaGjyR5LEhdnR3WJSsqv5Cy",
+      "login": "Ali",
+      "phone": "123",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 1,
+              "title": "Hoody Chess",
+              "image": {
+                "black": "Shop/hoody1.jpg",
+                "red": "Shop/hoody1-red.jpg",
+                "white": "Shop/hoody1-white.jpg",
+                "blue": "Shop/hoody1-blue.jpg"
+              },
+              "color": "black",
+              "size": "m",
+              "count": "4",
+              "price": 200,
+              "category": "hoody"
+            }
+          ],
+          "price": 760,
+          "date": "2023-02-15T05:19:41.308Z"
+        }
+      ],
+      "id": 8
     }
   ],
   "clothes": [
@@ -661,7 +691,7 @@
       "id": 1,
       "title": "itrun",
       "sum": 5,
-      "count": 29
+      "count": 28
     },
     {
       "id": 2,
@@ -676,5 +706,100 @@
       "count": 100
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "name": "Ali",
+      "email": "ali@mail.ru",
+      "phone": "123",
+      "county": "Kyrgyzstan",
+      "city": "Bishkek",
+      "street": "Ryskulova",
+      "home": "79B",
+      "flat": "1",
+      "message": "Домоой",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "Hoody Chess",
+          "image": {
+            "black": "Shop/hoody1.jpg",
+            "red": "Shop/hoody1-red.jpg",
+            "white": "Shop/hoody1-white.jpg",
+            "blue": "Shop/hoody1-blue.jpg"
+          },
+          "color": "black",
+          "size": "m",
+          "count": "4",
+          "price": 200,
+          "category": "hoody"
+        }
+      ],
+      "price": 760,
+      "date": "2023-02-15T05:18:05.901Z",
+      "id": 1
+    },
+    {
+      "name": "Ali",
+      "email": "ali@mail.ru",
+      "phone": "123",
+      "county": "Kyrgyzstan",
+      "city": "Bishkek",
+      "street": "Ryskulova",
+      "home": "79B",
+      "flat": "1",
+      "message": "Домоой",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "Hoody Chess",
+          "image": {
+            "black": "Shop/hoody1.jpg",
+            "red": "Shop/hoody1-red.jpg",
+            "white": "Shop/hoody1-white.jpg",
+            "blue": "Shop/hoody1-blue.jpg"
+          },
+          "color": "black",
+          "size": "m",
+          "count": "4",
+          "price": 200,
+          "category": "hoody"
+        }
+      ],
+      "price": 760,
+      "date": "2023-02-15T05:18:08.356Z",
+      "id": 2
+    },
+    {
+      "name": "Ali",
+      "email": "ali@mail.ru",
+      "phone": "123",
+      "county": "Kyrgyzstan",
+      "city": "Bishkek",
+      "street": "Ryskulova",
+      "home": "79B",
+      "flat": "1",
+      "message": "Домоой",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "Hoody Chess",
+          "image": {
+            "black": "Shop/hoody1.jpg",
+            "red": "Shop/hoody1-red.jpg",
+            "white": "Shop/hoody1-white.jpg",
+            "blue": "Shop/hoody1-blue.jpg"
+          },
+          "color": "black",
+          "size": "m",
+          "count": "4",
+          "price": 200,
+          "category": "hoody"
+        }
+      ],
+      "price": 760,
+      "userEmail": "ali@mail.ru",
+      "date": "2023-02-15T05:19:40.946Z",
+      "id": 3
+    }
+  ]
 }
