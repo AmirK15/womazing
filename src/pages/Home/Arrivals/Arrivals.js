@@ -1,5 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import image from '../../../assets/arrivals/arrivals.png'
 
 const Arrivals = () => {
@@ -18,7 +20,12 @@ const Arrivals = () => {
                         </button>
                     </div>
                     <div className="arrivals__image">
-                        <img src={image} alt="Woman"/>
+                        <LazyLoadImage
+                            alt="Woman"
+                            effect="blur"
+                            src={image}
+                        />
+                        {/*<img src={image} alt="Woman"/>*/}
                     </div>
                 </div>
             </div>

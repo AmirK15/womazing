@@ -1,12 +1,22 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Card = ({ id, image, title, price, sale, stock }) => {
 
     return (
         <div className="card" key={id}>
             <Link to={`/product/${id}`}>
-                <img className="card__img" src={`../${image.black}`} alt={title}/>
+                <LazyLoadImage
+                    className="card__img"
+                    alt={title}
+                    effect="blur"
+                    // height={image.height}
+                    src={`../${image.black}`} // use normal <img> attributes as props
+                    // width={image.width}
+                />
+                {/*<img className="card__img" src={`../${image.black}`} alt={title}/>*/}
             </Link>
             <h5 className="title-card">{title}</h5>
             {/*{sale ? <p className="price">*/}
