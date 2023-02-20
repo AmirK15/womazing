@@ -8,8 +8,6 @@ const Header = () => {
 
     const {t, i18n} = useTranslation()
 
-    console.log(i18n)
-
     const {user, logOutUser, cart} = useContext(CustomContext)
 
     const changesLanguage = (lang) => {

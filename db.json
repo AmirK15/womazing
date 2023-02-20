@@ -107,12 +107,20 @@
       "id": 8
     },
     {
-      "email": "hasbi@mail",
+      "email": "hasbii@mail",
       "password": "$2a$10$1vnQ6Lw6fDb1WXSbh7Wi4u5.ArBvHHud0ODMg/NYO/KL29OSR/yA2",
-      "login": "hasbi",
-      "phone": "123123",
+      "login": "hasbii",
+      "phone": "+996(123)12-31-23",
       "orders": [],
       "id": 9
+    },
+    {
+      "email": "iuu@iuu",
+      "password": "$2a$10$qSZqvIjQwVcK2oU/D/1jtOthwmyku.hAeVgJEEVnVeFTFtIc3nKta",
+      "login": "iuu",
+      "phone": "+996(123)12-31-23",
+      "orders": [],
+      "id": 10
     }
   ],
   "clothes": [

@@ -53,6 +53,24 @@ export const Context = (props) => {
 
     const [shop, setShop] = useState([])
 
+    const registerUser = (data) => {
+        axios.post('http://localhost:8080/register', {...data, orders: []})
+            .then((res) => {
+                localStorage.setItem('user', JSON.stringify(res.data.user))
+                setUser(res.data.user)
+                navigate('/')
+            })
+    }
+
+    const loginUser = (data) => {
+        axios.post('http://localhost:8080/login', data)
+            .then((res) => {
+                localStorage.setItem('user', JSON.stringify(res.data.user))
+                setUser(res.data.user)
+                navigate('/')
+            })
+    }
+
     useEffect(() => {
         if (localStorage.getItem('user') !== 'null') {
             setUser(JSON.parse(localStorage.getItem('user')))
@@ -73,24 +91,6 @@ export const Context = (props) => {
     useEffect(() => {
         localStorage.setItem('user', JSON.stringify(user))
     }, [])
-
-    const registerUser = (data) => {
-        axios.post('http://localhost:8080/register', {...data, orders: []})
-            .then((res) => {
-                localStorage.setItem('user', JSON.stringify(res.data.user))
-                setUser(res.data.user)
-                navigate('/')
-            })
-    }
-
-    const loginUser = (data) => {
-        axios.post('http://localhost:8080/login', data)
-            .then((res) => {
-                localStorage.setItem('user', JSON.stringify(res.data.user))
-                setUser(res.data.user)
-                navigate('/')
-            })
-    }
 
     const logOutUser = () => {
         localStorage.removeItem('user')
