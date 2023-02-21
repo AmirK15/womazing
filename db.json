@@ -121,6 +121,50 @@
       "phone": "+996(123)12-31-23",
       "orders": [],
       "id": 10
+    },
+    {
+      "email": "woman@woman",
+      "password": "$2a$10$eQXHV9RdHzzY67KhFtcf4OrpnJyk5Q78SRiIyZw7f/tWIgwfREW9i",
+      "login": "woman",
+      "phone": "+996(123)45-67-89",
+      "confirmPwd": "123456",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 5,
+              "title": "Hoody Rick and Morty",
+              "image": {
+                "black": "Shop/hoody5.jpg",
+                "white": "Shop/hoody5-white.jpg",
+                "grey": "Shop/hoody5-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 339,
+              "category": "hoody"
+            },
+            {
+              "id": 3,
+              "title": "Hoody Anime",
+              "image": {
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 400,
+              "category": "hoody"
+            }
+          ],
+          "price": 702.05,
+          "date": "2023-02-21T08:02:48.673Z"
+        }
+      ],
+      "id": 11
     }
   ],
   "clothes": [
@@ -707,7 +751,7 @@
       "id": 1,
       "title": "itrun",
       "sum": 5,
-      "count": 28
+      "count": 27
     },
     {
       "id": 2,
@@ -816,6 +860,51 @@
       "userEmail": "ali@mail.ru",
       "date": "2023-02-15T05:19:40.946Z",
       "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 5,
+          "title": "Hoody Rick and Morty",
+          "image": {
+            "black": "Shop/hoody5.jpg",
+            "white": "Shop/hoody5-white.jpg",
+            "grey": "Shop/hoody5-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 339,
+          "category": "hoody"
+        },
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 702.05,
+      "userEmail": "woman@woman",
+      "date": "2023-02-21T08:02:48.518Z",
+      "id": 4
     }
   ]
 }

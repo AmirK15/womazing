@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
+import React, {useContext, useRef} from 'react';
 import {CustomContext} from "../../Context";
-import {Link, useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import InputMask from 'react-input-mask'
 
@@ -11,11 +11,12 @@ const Register = () => {
     const {
         register,
         handleSubmit,
-        setError: {
-            errors
-        },
+        watch,
+        formState: {errors},
         reset
     } = useForm()
+    const password = useRef({});
+    password.current = watch("password", "")
 
     return (
         <section>
@@ -43,14 +44,28 @@ const Register = () => {
 
                 <input
                     className="form__input"
-                    {...register('password')}
                     type="password"
-                    placeholder="Введите password"/>
+                    placeholder="Введите password"
+                    {...register('password', {
+                        required: "You must specify a password",
+                        minLength: {
+                            value: 6,
+                            message: "Password must have at least 6 characters"
+                        }
+                    })}
+                />
+                {errors?.password && <p>{errors?.password?.message}</p>}
 
                 <input
                     className="form__input"
                     type="password"
-                    placeholder="Подтвердить password"/>
+                    placeholder="Подтвердить password"
+                    {...register('confirmPwd', {
+                        validate: value =>
+                            value === password.current || "The password do not match"
+                    })}
+                />
+                {errors?.confirmPwd && <p>{errors?.confirmPwd?.message}</p>}
 
                 <button className="btn" type="submit">Регистрация</button>
 
