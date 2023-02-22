@@ -6,8 +6,11 @@ import axios from "axios";
 
 const Checkout = () => {
 
-    const {cart, setCart, ticket, price, user, setUser, shop} = useContext(CustomContext)
+    const {cart, setCart, ticket, price, user, setUser, shop, getAllClothes} = useContext(CustomContext)
     console.log(cart)
+    // cart.map(item => {
+    //     return console.log((shop[item.id - 1]).inStock)
+    // })
     const {reset, register, handleSubmit} = useForm()
 
     const navigate = useNavigate()
@@ -39,11 +42,11 @@ const Checkout = () => {
         await axios(`http://localhost:8080/users/${user.id}`)
             .then((res) => setUser(res.data))
 
-        // await cart.map(item => {
-        //     axios.patch(`http://localhost:8080/clothes/${item.id}`, {
-        //         inStock: (shop[item.id - 1]) - item.count
-        //     }).then(() => console.log('Success'))
-        // })
+        await cart.map(item => {
+            axios.patch(`http://localhost:8080/clothes/${item.id}`, {
+                inStock: (shop[item.id - 1]).inStock - item.count
+            }).then(() => console.log('Success'))
+        })
 
         await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ?
             axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {
@@ -58,6 +61,7 @@ const Checkout = () => {
                 console.log('error')
 
         await reset()
+        await getAllClothes()
         await setCart([])
         await navigate('/order')
     }
