@@ -72,7 +72,7 @@ export const Context = (props) => {
     }
 
     useEffect(() => {
-        if (localStorage.getItem('user') !== 'null') {
+        if (localStorage.getItem('user') !== null) {
             setUser(JSON.parse(localStorage.getItem('user')))
         }
 
@@ -89,8 +89,9 @@ export const Context = (props) => {
     }, [cart])
 
     useEffect(() => {
+        console.log('юхуууу')
         localStorage.setItem('user', JSON.stringify(user))
-    }, [])
+    }, [user.orders])
 
     const logOutUser = () => {
         localStorage.removeItem('user')

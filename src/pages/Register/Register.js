@@ -46,26 +46,13 @@ const Register = () => {
                     className="form__input"
                     type="password"
                     placeholder="Введите password"
-                    {...register('password', {
-                        required: "You must specify a password",
-                        minLength: {
-                            value: 6,
-                            message: "Password must have at least 6 characters"
-                        }
-                    })}
                 />
-                {errors?.password && <p>{errors?.password?.message}</p>}
 
                 <input
                     className="form__input"
                     type="password"
                     placeholder="Подтвердить password"
-                    {...register('confirmPwd', {
-                        validate: value =>
-                            value === password.current || "The password do not match"
-                    })}
                 />
-                {errors?.confirmPwd && <p>{errors?.confirmPwd?.message}</p>}
 
                 <button className="btn" type="submit">Регистрация</button>
 

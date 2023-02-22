@@ -6,8 +6,8 @@ import axios from "axios";
 
 const Checkout = () => {
 
-    const {cart, setCart, ticket, price, user, setUser} = useContext(CustomContext)
-
+    const {cart, setCart, ticket, price, user, setUser, shop} = useContext(CustomContext)
+    console.log(cart)
     const {reset, register, handleSubmit} = useForm()
 
     const navigate = useNavigate()
@@ -26,7 +26,6 @@ const Checkout = () => {
 
         await axios.patch(`http://localhost:8080/users/${user.id}`, {
             orders: [
-                // ...user.orders,
                 {
                     clothes: cart,
                     price: Array.isArray(ticket) && ticket.length
@@ -40,21 +39,23 @@ const Checkout = () => {
         await axios(`http://localhost:8080/users/${user.id}`)
             .then((res) => setUser(res.data))
 
+        // await cart.map(item => {
+        //     axios.patch(`http://localhost:8080/clothes/${item.id}`, {
+        //         inStock: (shop[item.id - 1]) - item.count
+        //     }).then(() => console.log('Success'))
+        // })
 
         await Array.isArray(ticket) && ticket.length && ticket[0].count > 1 ?
-
             axios.patch(`http://localhost:8080/tickets/${ticket[0].id}`, {
                 count: ticket[0].count - 1
             }).then(() => console.log('use ticket')) :
 
-            ticket[0].count === 1 ?
+            Array.isArray(ticket) && ticket.length && ticket[0].count === 1 ?
 
                 axios.delete(`http://localhost:8080/tickets/${ticket[0].id}`)
                     .then(() => console.log('delete ticket')) :
 
                 console.log('error')
-
-
 
         await reset()
         await setCart([])

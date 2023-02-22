@@ -87,7 +87,7 @@ const Header = () => {
                             }
                             {
                                 user.login.length
-                                    ? <Link className="desc" to='/' onClick={() => logOutUser()}>{t("header.logout")}</Link>
+                                    ? <Link className="desc" to='/' onClick={logOutUser}>{t("header.logout")}</Link>
                                     : <Link className="desc" to="/login">{t("header.login")}</Link>
                             }
                         </div>
