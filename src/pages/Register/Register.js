@@ -21,7 +21,7 @@ const Register = () => {
     return (
         <section>
             <form className="form" onSubmit={handleSubmit(registerUser)}>
-                <h2 className="form__title">Регистрация </h2>
+                <h2 className="form__title">Регистрация</h2>
 
                 <input
                     className="form__input"
@@ -44,15 +44,29 @@ const Register = () => {
 
                 <input
                     className="form__input"
+                    {...register('password')}
                     type="password"
                     placeholder="Введите password"
+                    {...register('password', {
+                        required: "You must specify a password",
+                        minLength: {
+                            value: 6,
+                            message: "Password must have at least 6 characters"
+                        }
+                    })}
                 />
+                {errors?.password && <p>{errors?.password?.message}</p>}
 
                 <input
                     className="form__input"
                     type="password"
                     placeholder="Подтвердить password"
+                    {...register('confirmPwd', {
+                        validate: value =>
+                            value === password.current || "The password do not match"
+                    })}
                 />
+                {errors?.confirmPwd && <p>{errors?.confirmPwd?.message}</p>}
 
                 <button className="btn" type="submit">Регистрация</button>
 

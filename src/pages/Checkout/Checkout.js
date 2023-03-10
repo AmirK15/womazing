@@ -29,6 +29,7 @@ const Checkout = () => {
 
         await axios.patch(`http://localhost:8080/users/${user.id}`, {
             orders: [
+                ...user.orders,
                 {
                     clothes: cart,
                     price: Array.isArray(ticket) && ticket.length

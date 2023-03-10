@@ -46,6 +46,10 @@ const Header = () => {
                         <li className="nav__item">
                             <NavLink className="nav__link" to="/contact">{t("header.link4")}</NavLink>
                         </li>
+                        {user.email === 'admin@mail.ru'
+                            ? <li className="nav__item">
+                                <NavLink className="nav__link" to="/admin">Admin</NavLink>
+                            </li> : ''}
                     </ul>
                     <div className="nav__info">
                         <a href="tel: +7 (495) 823-54-12" className="nav__number">

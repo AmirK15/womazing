@@ -153,7 +153,7 @@
     },
     {
       "email": "ale@ale",
-      "password": "$2a$10$zASbsP9pqUN4jwbc1vvQNu6yp/R0q7VXYfwerW3ZoKlXtzWiIWsUK",
+      "password": "$2a$10$aHkFL7SxZDn5fMqcZw2hJesfX/pZmPLNjxj755kAAiT0T82B8zSea",
       "login": "ale",
       "phone": "+996(123)12-31-23",
       "confirmPwd": "123456",
@@ -161,24 +161,74 @@
         {
           "clothes": [
             {
-              "id": 2,
-              "title": "Hoody Harley Queen",
+              "id": 3,
+              "title": "Hoody Anime",
               "image": {
-                "black": "Shop/hoody2.jpg",
-                "white": "Shop/hoody2-white.jpg"
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
               },
-              "color": "black",
+              "color": "white",
               "size": "s",
               "count": 1,
-              "price": 300,
+              "price": 400,
               "category": "hoody"
             }
           ],
-          "price": 300,
-          "date": "2023-02-22T20:05:10.465Z"
+          "price": 400,
+          "date": "2023-03-03T19:04:15.376Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 3,
+              "title": "Hoody Anime",
+              "image": {
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 400,
+              "category": "hoody"
+            }
+          ],
+          "price": 400,
+          "date": "2023-03-03T19:04:54.096Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 3,
+              "title": "Hoody Anime",
+              "image": {
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 400,
+              "category": "hoody"
+            }
+          ],
+          "price": 400,
+          "date": "2023-03-03T19:05:19.425Z"
         }
       ],
       "id": 12
+    },
+    {
+      "email": "iiiii@iiiii",
+      "password": "$2a$10$MXCtP.PHcTGZgpY03Sy6AO5gnFmf.quUsAxXeR2wSim/VI1I1Et76",
+      "login": "iiii",
+      "phone": "+996(234)23-21-34",
+      "confirmPwd": "123456",
+      "orders": [],
+      "id": 13
     }
   ],
   "clothes": [
@@ -229,7 +279,7 @@
         "black",
         "white"
       ],
-      "inStock": 13
+      "inStock": 12
     },
     {
       "id": 3,
@@ -253,7 +303,7 @@
         "black",
         "grey"
       ],
-      "inStock": 22
+      "inStock": 20
     },
     {
       "id": 4,
@@ -277,7 +327,7 @@
         "black",
         "white"
       ],
-      "inStock": 24,
+      "inStock": 23,
       "priceSale": ""
     },
     {
@@ -2342,6 +2392,219 @@
       "userEmail": "ale@ale",
       "date": "2023-02-22T20:05:10.055Z",
       "id": 45
+    },
+    {
+      "name": "fsdfjl",
+      "email": "sdlafk@asdlkf",
+      "phone": "234",
+      "county": "asl;dfkj",
+      "city": "dsfjl",
+      "street": "sadf",
+      "home": "322",
+      "flat": "3",
+      "message": ";lakjf",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": {
+            "black": "Shop/hoody2.jpg",
+            "white": "Shop/hoody2-white.jpg"
+          },
+          "color": "black",
+          "size": "s",
+          "count": 1,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 300,
+      "userEmail": "ale@ale",
+      "date": "2023-03-03T18:59:35.327Z",
+      "id": 46
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 4,
+          "title": "Hoody Wendy",
+          "image": {
+            "black": "Shop/hoody4.jpg",
+            "white": "Shop/hoody4-white.jpg",
+            "red": "Shop/hoody4-red.jpg",
+            "grey": "Shop/hoody4-grey.jpg"
+          },
+          "color": "red",
+          "size": "s",
+          "count": 1,
+          "price": 75,
+          "category": "hoody"
+        }
+      ],
+      "price": 75,
+      "userEmail": "ale@ale",
+      "date": "2023-03-03T19:03:13.284Z",
+      "id": 47
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 400,
+      "userEmail": "ale@ale",
+      "date": "2023-03-03T19:04:15.023Z",
+      "id": 48
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 400,
+      "userEmail": "ale@ale",
+      "date": "2023-03-03T19:04:53.739Z",
+      "id": 49
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 400,
+      "userEmail": "ale@ale",
+      "date": "2023-03-03T19:05:19.087Z",
+      "id": 50
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": {
+            "black": "Shop/hoody2.jpg",
+            "white": "Shop/hoody2-white.jpg"
+          },
+          "color": "black",
+          "size": "s",
+          "count": 1,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 300,
+      "date": "2023-03-10T15:37:56.513Z",
+      "id": 51
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": {
+            "black": "Shop/hoody2.jpg",
+            "white": "Shop/hoody2-white.jpg"
+          },
+          "color": "black",
+          "size": "s",
+          "count": 1,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 300,
+      "date": "2023-03-10T15:37:58.928Z",
+      "id": 52
     }
   ]
 }
