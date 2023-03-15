@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, {Suspense, useContext} from "react";
 import { Routes, Route } from "react-router-dom"
 import './style.scss'
 import './i18n'
@@ -15,8 +15,14 @@ import Product from "./pages/Product/Product"
 import Checkout from "./pages/Checkout/Checkout";
 import Order from "./pages/Order/Order";
 import Profile from "./pages/Profile/Profile";
+import {CustomContext} from "./Context";
+import AdminPanel from "./pages/AdminPanel/AdminPanel";
+import CreateProduct from "./pages/CreateProduct/CreateProduct";
 
 const App = () => {
+
+    const {user} = useContext(CustomContext)
+
     return (
         <Suspense fallback={'Loading...'}>
             <Routes>
@@ -31,6 +37,12 @@ const App = () => {
                     <Route path='profile' element={<Profile/>}/>
                     <Route path='product/:id' element={<Product/>}/>
                     <Route path='*' element={<NotFound/>}/>
+                    {user.email === 'admin@mail.ru' &&
+                        <Route path='admin' element={<AdminPanel/>} />
+                    }
+                    {user.email === 'admin@mail.ru' &&
+                        <Route path='create' element={<CreateProduct/>} />
+                    }
                 </Route>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/register' element={<Register/>}/>

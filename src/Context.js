@@ -8,10 +8,6 @@ export const Context = (props) => {
 
     const navigate = useNavigate()
 
-    const [user, setUser] = useState({
-        login: ''
-    })
-
     const [cart, setCart] = useState([])
 
     const addCart = (product) => {
@@ -58,6 +54,12 @@ export const Context = (props) => {
             .then(({data}) => setShop(data))
     }
 
+    const [product, setProduct] = useState({})
+
+    const [user, setUser] = useState({
+        login: ''
+    })
+
     const registerUser = (data) => {
         axios.post('http://localhost:8080/register', {...data, orders: []})
             .then((res) => {
@@ -74,6 +76,7 @@ export const Context = (props) => {
                 setUser(res.data.user)
                 navigate('/')
             })
+            .catch(() => alert('Введены неверные данные'))
     }
 
     useEffect(() => {
@@ -124,7 +127,9 @@ export const Context = (props) => {
         setCart,
         ticket,
         setTicket,
-        price
+        price,
+        product,
+        setProduct
     }
 
     return <CustomContext.Provider value={value}>

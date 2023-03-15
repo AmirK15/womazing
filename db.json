@@ -229,6 +229,170 @@
       "confirmPwd": "123456",
       "orders": [],
       "id": 13
+    },
+    {
+      "email": "admin@mail.ru",
+      "password": "$2a$10$JJmTZmmv1S6xeSk1hmehOO237VHumAcf8cH3GRRWGGHbmPG9pUos6",
+      "login": "admin",
+      "phone": "+996(999)99-99-9_",
+      "confirmPwd": "123456",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 3,
+              "title": "Hoody Anime",
+              "image": {
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 400,
+              "category": "hoody"
+            }
+          ],
+          "price": 380,
+          "date": "2023-03-12T11:31:29.107Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 5,
+              "title": "Hoody Rick and Morty",
+              "image": {
+                "black": "Shop/hoody5.jpg",
+                "white": "Shop/hoody5-white.jpg",
+                "grey": "Shop/hoody5-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 339,
+              "category": "hoody"
+            }
+          ],
+          "price": 339,
+          "date": "2023-03-12T11:35:02.489Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 5,
+              "title": "Hoody Rick and Morty",
+              "image": {
+                "black": "Shop/hoody5.jpg",
+                "white": "Shop/hoody5-white.jpg",
+                "grey": "Shop/hoody5-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 339,
+              "category": "hoody"
+            }
+          ],
+          "price": 339,
+          "date": "2023-03-12T11:35:31.984Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 3,
+              "title": "Hoody Anime",
+              "image": {
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 400,
+              "category": "hoody"
+            }
+          ],
+          "price": 400,
+          "date": "2023-03-12T11:43:50.255Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 6,
+              "title": "Sport Suit STAMINA1",
+              "image": {
+                "black": "Shop/sportsuit1-black.jpg",
+                "white": "Shop/sportsuit1-white.jpg",
+                "red": "Shop/sportsuit1-red.jpg",
+                "pink": "Shop/sportsuit1-pink.jpg",
+                "grey": "Shop/sportsuit1-grey.jpg",
+                "beige": "Shop/sportsuit1-beige.jpg",
+                "blue": "Shop/sportsuit1.jpg"
+              },
+              "color": "beige",
+              "size": "s",
+              "count": 1,
+              "price": 251.1,
+              "category": "sportsuit"
+            }
+          ],
+          "price": 251.1,
+          "date": "2023-03-14T19:32:44.394Z"
+        }
+      ],
+      "id": 14
+    },
+    {
+      "email": "user@mail.ru",
+      "password": "$2a$10$IWpkNGInWhzCEE29Xa1dd.ENEqqoMJDXz04eCEfhbIT1paYrZhvI2",
+      "login": "user",
+      "phone": "+996(123)12-32-13",
+      "confirmPwd": "123123",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 1,
+              "title": "Hoody Chess",
+              "image": {
+                "black": "Shop/hoody1.jpg",
+                "red": "Shop/hoody1-red.jpg",
+                "white": "Shop/hoody1-white.jpg",
+                "blue": "Shop/hoody1-blue.jpg"
+              },
+              "color": "red",
+              "size": "s",
+              "count": 1,
+              "price": 200,
+              "category": "hoody"
+            }
+          ],
+          "price": 200,
+          "date": "2023-03-15T18:49:06.349Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 2,
+              "title": "Hoody Harley Queen",
+              "image": {
+                "black": "Shop/hoody2.jpg",
+                "white": "Shop/hoody2-white.jpg"
+              },
+              "color": "black",
+              "size": "s",
+              "count": 1,
+              "price": 300,
+              "category": "hoody"
+            }
+          ],
+          "price": 300,
+          "date": "2023-03-15T20:45:40.931Z"
+        }
+      ],
+      "id": 15
     }
   ],
   "clothes": [
@@ -258,7 +422,7 @@
         "white",
         "black"
       ],
-      "inStock": 10
+      "inStock": 9
     },
     {
       "id": 2,
@@ -279,7 +443,7 @@
         "black",
         "white"
       ],
-      "inStock": 12
+      "inStock": 11
     },
     {
       "id": 3,
@@ -303,7 +467,7 @@
         "black",
         "grey"
       ],
-      "inStock": 20
+      "inStock": 18
     },
     {
       "id": 4,
@@ -351,7 +515,8 @@
         "black",
         "grey"
       ],
-      "inStock": 22
+      "inStock": 20,
+      "priceSale": 305.1
     },
     {
       "id": 6,
@@ -381,7 +546,8 @@
         "pink",
         "grey"
       ],
-      "inStock": 10
+      "inStock": 9,
+      "priceSale": 251.1
     },
     {
       "id": 7,
@@ -815,7 +981,7 @@
       "id": 1,
       "title": "itrun",
       "sum": 5,
-      "count": 23
+      "count": 22
     },
     {
       "id": 2,
@@ -2605,6 +2771,227 @@
       "price": 300,
       "date": "2023-03-10T15:37:58.928Z",
       "id": 52
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 380,
+      "userEmail": "admin@mail.ru",
+      "date": "2023-03-12T11:31:28.550Z",
+      "id": 53
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 5,
+          "title": "Hoody Rick and Morty",
+          "image": {
+            "black": "Shop/hoody5.jpg",
+            "white": "Shop/hoody5-white.jpg",
+            "grey": "Shop/hoody5-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 339,
+          "category": "hoody"
+        }
+      ],
+      "price": 339,
+      "userEmail": "admin@mail.ru",
+      "date": "2023-03-12T11:35:02.381Z",
+      "id": 54
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 5,
+          "title": "Hoody Rick and Morty",
+          "image": {
+            "black": "Shop/hoody5.jpg",
+            "white": "Shop/hoody5-white.jpg",
+            "grey": "Shop/hoody5-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 339,
+          "category": "hoody"
+        }
+      ],
+      "price": 339,
+      "userEmail": "admin@mail.ru",
+      "date": "2023-03-12T11:35:31.629Z",
+      "id": 55
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 400,
+      "userEmail": "admin@mail.ru",
+      "date": "2023-03-12T11:43:49.859Z",
+      "id": 56
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 6,
+          "title": "Sport Suit STAMINA1",
+          "image": {
+            "black": "Shop/sportsuit1-black.jpg",
+            "white": "Shop/sportsuit1-white.jpg",
+            "red": "Shop/sportsuit1-red.jpg",
+            "pink": "Shop/sportsuit1-pink.jpg",
+            "grey": "Shop/sportsuit1-grey.jpg",
+            "beige": "Shop/sportsuit1-beige.jpg",
+            "blue": "Shop/sportsuit1.jpg"
+          },
+          "color": "beige",
+          "size": "s",
+          "count": 1,
+          "price": 251.1,
+          "category": "sportsuit"
+        }
+      ],
+      "price": 251.1,
+      "userEmail": "admin@mail.ru",
+      "date": "2023-03-14T19:32:44.001Z",
+      "id": 57
+    },
+    {
+      "name": "User",
+      "email": "user@mail.ru",
+      "phone": "123123123",
+      "county": "user",
+      "city": "user",
+      "street": "user1",
+      "home": "user123",
+      "flat": "123",
+      "message": "123123",
+      "clothes": [
+        {
+          "id": 1,
+          "title": "Hoody Chess",
+          "image": {
+            "black": "Shop/hoody1.jpg",
+            "red": "Shop/hoody1-red.jpg",
+            "white": "Shop/hoody1-white.jpg",
+            "blue": "Shop/hoody1-blue.jpg"
+          },
+          "color": "red",
+          "size": "s",
+          "count": 1,
+          "price": 200,
+          "category": "hoody"
+        }
+      ],
+      "price": 200,
+      "userEmail": "user@mail.ru",
+      "date": "2023-03-15T18:49:05.969Z",
+      "id": 58
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 2,
+          "title": "Hoody Harley Queen",
+          "image": {
+            "black": "Shop/hoody2.jpg",
+            "white": "Shop/hoody2-white.jpg"
+          },
+          "color": "black",
+          "size": "s",
+          "count": 1,
+          "price": 300,
+          "category": "hoody"
+        }
+      ],
+      "price": 300,
+      "userEmail": "user@mail.ru",
+      "date": "2023-03-15T20:45:40.530Z",
+      "id": 59
     }
   ]
 }

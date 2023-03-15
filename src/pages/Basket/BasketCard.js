@@ -6,7 +6,7 @@ const BasketCard = ({item}) => {
 
     const [count, setCount] = useState(item.count)
 
-    const {deleteCart, updateCart} = useContext(CustomContext)
+    const {deleteCart, updateCart, product} = useContext(CustomContext)
 
     return (
         <ul className="basket__list">
@@ -33,9 +33,9 @@ const BasketCard = ({item}) => {
             </li>
             <li className="basket__item">
                 <input onChange={(e) => {
-                    setCount(e.target.value)
+                    setCount(e.target.value >= product.inStock ? product.inStock : e.target.value)
                     updateCart(item.id, item.color, item.size, e.target.value)
-                }} min='1' value={count} type="number"/>
+                }} min='1' value={count} type="number" max={product.inStock} />
             </li>
             <li className="basket__item">
                 <p className='desc'>${item.price * item.count}</p>

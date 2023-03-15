@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom'
 import Done from '../../assets/order/done.svg'
+import {CustomContext} from "../../Context";
 
 const Order = () => {
+
+    const {getAllClothes} = useContext(CustomContext)
+
     return (
         <section className='order'>
             <div className="container">
@@ -16,7 +20,7 @@ const Order = () => {
                         </div>
                     </div>
                     <Link to='/'>
-                        <button className="btn btn-bg">Перейти на главную</button>
+                        <button onClick={getAllClothes} className="btn btn-bg">Перейти на главную</button>
                     </Link>
                 </div>
             </div>

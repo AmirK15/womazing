@@ -1,17 +1,20 @@
 import React, {useEffect, useState, useContext} from 'react';
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import axios from "axios";
 import {CustomContext} from "../../Context";
 import Card from "../../components/Card/Card";
 
 const Product = () => {
 
+    const location = useLocation()
+
     const params = useParams()
-    const [product, setProduct] = useState({})
     const [color, setColor] = useState('')
+    const [sale, setSale] = useState(false)
+    const [saleCount, setSaleCount] = useState(0)
     const [size, setSize] = useState('')
     const [count, setCount] = useState(1)
-    const {shop, addCart} = useContext(CustomContext)
+    const {shop, addCart, product, setProduct, getAllClothes} = useContext(CustomContext)
 
     useEffect(() => {
         axios(`http://localhost:8080/clothes/${params.id}`)
@@ -21,7 +24,7 @@ const Product = () => {
                 setSize(data.size[0])
                 // window.scrollTo(0, 0)
             })
-    }, [params])
+    }, [location, shop])
 
     return (
         <section className="product">
@@ -32,6 +35,23 @@ const Product = () => {
                     <div className="product__content">
                         <img className="product__content-img" src={`../${product.image.black}`} alt={product.title}/>
                         <div className="product__info">
+                            {
+                                !product.priceSale &&
+                                <div>
+                                    {sale && <input type="number" value={saleCount} onChange={(e) => setSaleCount(e.target.value)}/>}
+                                    <button type='button' onClick={() => {
+                                        if (sale) {
+                                            axios.patch(`http://localhost:8080/clothes/${product.id}`, {priceSale: product.price - product.price / 100 * saleCount})
+                                                .then(() => {
+                                                    getAllClothes()
+                                                    setSaleCount(0)
+                                                })
+                                        }
+                                        setSale(!sale)
+                                        setSaleCount(0)
+                                    }} className="btn">Добавить {!sale && 'скидку'}</button>
+                                </div>
+                            }
                             {
                                 product.priceSale ?
                                     <div className="product__content-price">

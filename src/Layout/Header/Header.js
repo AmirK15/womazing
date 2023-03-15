@@ -48,7 +48,7 @@ const Header = () => {
                         </li>
                         {user.email === 'admin@mail.ru'
                             ? <li className="nav__item">
-                                <NavLink className="nav__link" to="/admin">Admin</NavLink>
+                                <NavLink className="nav__link" to="/admin">Админ Панель</NavLink>
                             </li> : ''}
                     </ul>
                     <div className="nav__info">

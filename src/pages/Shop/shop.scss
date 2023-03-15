@@ -1,4 +1,8 @@
 .shop{
+  padding-bottom: 130px;
+  .ant-pagination{
+    text-align: center;
+  }
   &__list{
     margin: 114px 0 92px;
     display: flex;
@@ -19,5 +23,9 @@
     display: flex;
     gap: 65px 30px;
     flex-wrap: wrap;
+    margin-bottom: 65px;
+  }
+  &__show{
+    margin-bottom: 65px;
   }
 }
