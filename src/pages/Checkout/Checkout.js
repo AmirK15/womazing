@@ -31,6 +31,7 @@ const Checkout = () => {
             orders: [
                 ...user.orders,
                 {
+                    ...data,
                     clothes: cart,
                     price: Array.isArray(ticket) && ticket.length
                         ? price - price / 100 * ticket[0].sum

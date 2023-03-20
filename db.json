@@ -393,6 +393,86 @@
         }
       ],
       "id": 15
+    },
+    {
+      "email": "max@mail.ru",
+      "password": "$2a$10$5DcclcpdIUvOGyprxPZHy.kjnSuiPv1k3arYWrTAvFdDC/gg.kd3y",
+      "login": "max",
+      "phone": "+996(123)12-31-23",
+      "confirmPwd": "123456",
+      "orders": [
+        {
+          "clothes": [
+            {
+              "id": 4,
+              "title": "Hoody Wendy",
+              "image": {
+                "black": "Shop/hoody4.jpg",
+                "white": "Shop/hoody4-white.jpg",
+                "red": "Shop/hoody4-red.jpg",
+                "grey": "Shop/hoody4-grey.jpg"
+              },
+              "color": "red",
+              "size": "s",
+              "count": 1,
+              "price": 75,
+              "category": "hoody"
+            }
+          ],
+          "price": 75,
+          "date": "2023-03-20T19:07:19.771Z"
+        },
+        {
+          "clothes": [
+            {
+              "id": 5,
+              "title": "Hoody Rick and Morty",
+              "image": {
+                "black": "Shop/hoody5.jpg",
+                "white": "Shop/hoody5-white.jpg",
+                "grey": "Shop/hoody5-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 305.1,
+              "category": "hoody"
+            }
+          ],
+          "price": 305.1,
+          "date": "2023-03-20T19:08:28.737Z"
+        },
+        {
+          "name": "max",
+          "email": "iuu@mail.ru",
+          "phone": "123",
+          "county": "123123",
+          "city": "123",
+          "street": "123",
+          "home": "123",
+          "flat": "123",
+          "message": "123",
+          "clothes": [
+            {
+              "id": 3,
+              "title": "Hoody Anime",
+              "image": {
+                "black": "Shop/hoody3.jpg",
+                "white": "Shop/hoody3-white.jpg",
+                "grey": "Shop/hoody3-grey.jpg"
+              },
+              "color": "white",
+              "size": "s",
+              "count": 1,
+              "price": 400,
+              "category": "hoody"
+            }
+          ],
+          "price": 400,
+          "date": "2023-03-20T19:11:37.280Z"
+        }
+      ],
+      "id": 16
     }
   ],
   "clothes": [
@@ -467,7 +547,7 @@
         "black",
         "grey"
       ],
-      "inStock": 18
+      "inStock": 17
     },
     {
       "id": 4,
@@ -491,7 +571,7 @@
         "black",
         "white"
       ],
-      "inStock": 23,
+      "inStock": 22,
       "priceSale": ""
     },
     {
@@ -515,7 +595,7 @@
         "black",
         "grey"
       ],
-      "inStock": 20,
+      "inStock": 19,
       "priceSale": 305.1
     },
     {
@@ -2992,6 +3072,100 @@
       "userEmail": "user@mail.ru",
       "date": "2023-03-15T20:45:40.530Z",
       "id": 59
+    },
+    {
+      "name": "max",
+      "email": "iuu@mail.ru",
+      "phone": "123",
+      "county": "KG",
+      "city": "Bish",
+      "street": "ale",
+      "home": "12",
+      "flat": "12",
+      "message": "iuu",
+      "clothes": [
+        {
+          "id": 4,
+          "title": "Hoody Wendy",
+          "image": {
+            "black": "Shop/hoody4.jpg",
+            "white": "Shop/hoody4-white.jpg",
+            "red": "Shop/hoody4-red.jpg",
+            "grey": "Shop/hoody4-grey.jpg"
+          },
+          "color": "red",
+          "size": "s",
+          "count": 1,
+          "price": 75,
+          "category": "hoody"
+        }
+      ],
+      "price": 75,
+      "userEmail": "max@mail.ru",
+      "date": "2023-03-20T19:07:19.339Z",
+      "id": 60
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "county": "",
+      "city": "",
+      "street": "",
+      "home": "",
+      "flat": "",
+      "message": "",
+      "clothes": [
+        {
+          "id": 5,
+          "title": "Hoody Rick and Morty",
+          "image": {
+            "black": "Shop/hoody5.jpg",
+            "white": "Shop/hoody5-white.jpg",
+            "grey": "Shop/hoody5-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 305.1,
+          "category": "hoody"
+        }
+      ],
+      "price": 305.1,
+      "userEmail": "max@mail.ru",
+      "date": "2023-03-20T19:08:28.343Z",
+      "id": 61
+    },
+    {
+      "name": "max",
+      "email": "iuu@mail.ru",
+      "phone": "123",
+      "county": "123123",
+      "city": "123",
+      "street": "123",
+      "home": "123",
+      "flat": "123",
+      "message": "123",
+      "clothes": [
+        {
+          "id": 3,
+          "title": "Hoody Anime",
+          "image": {
+            "black": "Shop/hoody3.jpg",
+            "white": "Shop/hoody3-white.jpg",
+            "grey": "Shop/hoody3-grey.jpg"
+          },
+          "color": "white",
+          "size": "s",
+          "count": 1,
+          "price": 400,
+          "category": "hoody"
+        }
+      ],
+      "price": 400,
+      "userEmail": "max@mail.ru",
+      "date": "2023-03-20T19:11:36.875Z",
+      "id": 62
     }
   ]
 }

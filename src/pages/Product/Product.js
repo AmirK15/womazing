@@ -14,7 +14,7 @@ const Product = () => {
     const [saleCount, setSaleCount] = useState(0)
     const [size, setSize] = useState('')
     const [count, setCount] = useState(1)
-    const {shop, addCart, product, setProduct, getAllClothes} = useContext(CustomContext)
+    const {shop, addCart, product, setProduct, getAllClothes, user} = useContext(CustomContext)
 
     useEffect(() => {
         axios(`http://localhost:8080/clothes/${params.id}`)
@@ -36,7 +36,7 @@ const Product = () => {
                         <img className="product__content-img" src={`../${product.image.black}`} alt={product.title}/>
                         <div className="product__info">
                             {
-                                !product.priceSale &&
+                                !product.priceSale && user.email === 'admin@mail.ru' &&
                                 <div>
                                     {sale && <input type="number" value={saleCount} onChange={(e) => setSaleCount(e.target.value)}/>}
                                     <button type='button' onClick={() => {

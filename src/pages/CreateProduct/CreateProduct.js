@@ -37,28 +37,28 @@ const CreateProduct = () => {
                     <div className="create__form-block">
                         <label className="create__form-label">
                             <span>Название</span>
-                            <input {...register('title')} className="create__form-input" type="text"/>
+                            <input {...register('title')} className="form__input" type="text"/>
                         </label>
                     </div>
 
                     <div className="create__form-block">
                         <label className="create__form-label">
                             <span>Цена</span>
-                            <input {...register('price')} className="create__form-input" type="number"/>
+                            <input {...register('price')} className="form__input" type="number"/>
                         </label>
                     </div>
 
                     <div className="create__form-block">
                         <label className="create__form-label">
                             <span>Количество</span>
-                            <input {...register('inStock')} className="create__form-input" type="number"/>
+                            <input {...register('inStock')} className="form__input" type="number"/>
                         </label>
                     </div>
 
                     <div className="create__form-block">
                         <label className="create__form-label">
                             <span>Изображение</span>
-                            <input {...register('image')} className="create__form-input" type="file"/>
+                            <input {...register('image')} className="form__input" type="file"/>
                         </label>
                     </div>
 

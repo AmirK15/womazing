@@ -155,7 +155,7 @@ const Profile = () => {
                                                 <p className='desc'>${item.price * item.count}</p>
                                             </li>
                                         </ul>
-                                        <p className='desc'>{el.date}</p>
+                                        <p className='desc'>{el.date.slice(0, 10).split('-').join('.')} - {el.date.slice(11, 19)}</p>
                                     </>
                                 ))
                             ))}
