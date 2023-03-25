@@ -18,7 +18,7 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <nav className="nav">
-                    <NavLink to="/" href="#" className="nav__logo">
+                    <Link to="/" href="#" className="nav__logo">
                         <span>
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -32,7 +32,7 @@ const Header = () => {
                         </svg>
                         </span>
                         <h1 className="nav__title">Womazing</h1>
-                    </NavLink>
+                    </Link>
                     <ul className="nav__list">
                         <li className="nav__item">
                             <NavLink className="nav__link" to="/">{t("header.link1")}</NavLink>
@@ -48,7 +48,7 @@ const Header = () => {
                         </li>
                         {user.email === 'admin@mail.ru'
                             ? <li className="nav__item">
-                                <NavLink className="nav__link" to="/admin">Админ Панель</NavLink>
+                                <NavLink className="nav__link" to="/clothes">Админ Панель</NavLink>
                             </li> : ''}
                     </ul>
                     <div className="nav__info">

@@ -27,6 +27,9 @@ const App = () => {
         <Suspense fallback={'Loading...'}>
             <Routes>
                 <Route path="/" element={<Layout/>}>
+                    {user.email === 'admin@mail.ru' &&
+                        <Route path='*' element={<AdminPanel/>} />
+                    }
                     <Route path='' element={<Home/>}/>
                     <Route path='contact' element={<Contact/>}/>
                     <Route path='shop' element={<Shop/>}/>
@@ -37,11 +40,11 @@ const App = () => {
                     <Route path='profile' element={<Profile/>}/>
                     <Route path='product/:id' element={<Product/>}/>
                     <Route path='*' element={<NotFound/>}/>
+                    {/*{user.email === 'admin@mail.ru' &&*/}
+                    {/*    <Route path='/admin' element={<AdminPanel/>} />*/}
+                    {/*}*/}
                     {user.email === 'admin@mail.ru' &&
-                        <Route path='admin' element={<AdminPanel/>} />
-                    }
-                    {user.email === 'admin@mail.ru' &&
-                        <Route path='create' element={<CreateProduct/>} />
+                        <Route path='/create' element={<CreateProduct/>} />
                     }
                 </Route>
                 <Route path='/login' element={<Login/>}/>

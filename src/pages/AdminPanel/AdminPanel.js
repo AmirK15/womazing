@@ -1,10 +1,11 @@
 import React from 'react';
+import './adminPanel.scss'
 
 const AdminPanel = () => {
     return (
-        <div>
-            Admin
-        </div>
+        <section>
+            admin
+        </section>
     );
 };
 
